@@ -1,17 +1,17 @@
 # TechEWorks releases
 
-This is the public release catalog for TechEWorks products. Product source code, build workspaces, and QA scripts live in their private product repositories. Publication is controlled by the TechEWorks release maintainers.
+This public catalog lists approved TechEWorks product releases. Editable product source, build workspaces and private QA evidence remain in each private product repository. Each published version includes a reviewed product source snapshot, accepted delivery artifacts, required notices and a public release record. Publication requires a separate verified promotion.
 
-| Product | Public release record |
+| Product | Public release index |
 | --- | --- |
-| WorkDesk v1.0 | [workdeskv1.0/index.json](workdeskv1.0/index.json) |
-| ServOS v1.0 | [servosv1.0/index.json](servosv1.0/index.json) |
-| Fleet RMM v1.0 | [fleetrmmv1.0/index.json](fleetrmmv1.0/index.json) |
-| UCP v1.0 | [ucpv1.0/index.json](ucpv1.0/index.json) |
-| Maestro v1.0 | [maestrov1.0/index.json](maestrov1.0/index.json) |
+| WorkDesk 1.0 | [workdeskv1.0/index.json](workdeskv1.0/index.json) |
+| ServOS 1.0 | [servosv1.0/index.json](servosv1.0/index.json) |
+| Fleet RMM 1.0 | [fleetrmmv1.0/index.json](fleetrmmv1.0/index.json) |
+| UCP 1.0 | [ucpv1.0/index.json](ucpv1.0/index.json) |
+| Maestro 1.0 | [maestrov1.0/index.json](maestrov1.0/index.json) |
 
-Each index lists **published** releases only. Each entry must identify the product version, release channel, UTC approval/publication time, source commit, supported upgrade path, asset names and byte sizes, SHA-256 hashes, signature, QA result, release notes, and rollback path. An empty index means no release has been published.
+An index lists **published** releases only; an empty index means none is published. A product version is written without a leading `v`, for example `1.0.0`. The public tag adds it once: `<product>-v<version>`, for example `workdeskv1.0-v1.0.0`. Each release record identifies its approved private source commit and Git tree hash, public source-snapshot hash, accepted output IDs, exact artifact names, byte sizes, SHA-256 hashes and signatures, applicable OS/architecture/device scope, QA result, licences and notices, approval and publication time, upgrade path, release notes and rollback path. It names pending or excluded outputs explicitly.
 
-Binaries belong on GitHub Releases attached to this repository, not in Git history. Tags must be unique across all products, for example `workdeskv1.0-v1.0.0-beta.1` and `servosv1.0-v1.0.0`. Asset filenames include product, version, architecture, and purpose. Installer and updater consumers pin the exact tag, asset name, byte count, and SHA-256; they do not use a moving `latest` URL.
+Finished binaries are attached to the GitHub Release or linked by exact hash to a verified artifact location when they exceed the host's asset limit. They are not committed as ordinary Git blobs. Installers and updaters pin the exact tag, artifact name, byte count and SHA-256; they do not use a moving `latest` URL. A changed public artifact requires a new numbered product version and release record.
 
-WorkDesk's graphical and text installers use the same approved core image and hash. Their installer ISOs may be separate release assets. Update records are separate from installer assets and must state whether installation is automatic under policy or requires an administrator.
+WorkDesk's GUI offline, GUI network and text network installers are possible output parts of one product version. The accepted output matrix and verified artifact hashes determine what is actually released. A common core-image identity is recorded only when the build and QA evidence prove it. Update packages have their own declared output IDs and state their automatic or administrator-controlled installation policy.
