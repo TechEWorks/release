@@ -23,6 +23,22 @@ the approved tree and build tree are both
   **byte-identical to the published ISO**. `xorriso` reported BIOS and UEFI
   El Torito entries. The first run exposed source-ZIP CRLF line endings; the
   public guide now normalizes text to LF after verifying the archive.
+- **Published-ISO live smoke test, 2026.11.05:** the exact 71,696,384-byte
+  release ISO (`b449436c0575a0dd95d61a3a228b0cbe465f415b64dea392352b1da2c04556cf`)
+  booted on disposable UEFI PVE VM225. With DHCP on VirtIO `ens18`, the installer
+  selected only the 8 GiB disk with stable ID
+  `/dev/disk/by-id/scsi-0QEMU_QEMU_HARDDISK_drive-scsi0`, reviewed its existing
+  partitions, and required typed `ERASE`. The single-disk ext4 installation
+  completed all six displayed tasks and saved a 201,413-byte install log under
+  `/techev1.0/servosv1.0/logs/install/install.log`. After shutdown, the ISO
+  was detached and firmware boot order set to `scsi0`; the guest cold-booted
+  to the ServOS console. The guest reported Debian 13.7, kernel
+  `6.12.115+deb13.1-amd64`, ext4 root on the selected stable disk, active and
+  enabled OpenSSH, and a working `servadmin` SSH login with sudo membership.
+  `sudo apt update` reached the Debian main, updates and security repositories
+  and exited successfully. The installed `teche -v` reported utility 1.0.0.
+  This proves one ext4/DHCP/password path on the published bytes; it does not
+  qualify other storage or network choices.
 - An earlier exact ISO from the same installer backend, SHA-256
   `7f0d27d40eac5dd1dd861ecf3afe610388a560d408702005cbe5045a2f4c4a5e`,
   passed on disposable PVE VM225: ext4 single-disk boot; ZFS two-disk mirror
@@ -40,12 +56,12 @@ The public source ZIP has Windows CRLF line endings. The
 after archive verification and before shell execution. The ZIP, ISO and their
 published checksums remain immutable; the corrected public rebuild passed.
 
-The following paths are not claimed as passed for the published ISO: a fresh
-end-to-end install and cold boot of the published bytes; single-disk XFS and
-ZFS; representative ZFS RAIDZ, mdadm ext4 and other Btrfs layouts; static IPv4;
-SSH public-key access; separate physical directory partitions; degraded-member
-boot and repair; interrupted-install recovery; failed network/mirror handling;
-and broader non-VirtIO hardware. The optional WorkDesk catalog requires a
+The following paths are not claimed as passed for the published ISO:
+single-disk XFS and ZFS; representative ZFS RAIDZ, mdadm ext4 and other Btrfs
+layouts; static IPv4; SSH public-key access; separate physical directory
+partitions; degraded-member boot and repair; interrupted-install recovery;
+failed network/mirror handling; and broader non-VirtIO hardware. The optional
+WorkDesk catalog requires a
 published pinned HTTPS ZIP and its matching SHA-256. A complete installed and
 ISO component SBOM, upstream notice audit and release signature are also
 post-release controls. They must be closed before claiming a mission-critical

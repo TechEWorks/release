@@ -69,8 +69,9 @@ for independent verification.
 These are unaltered VM225 captures from preceding installer candidates.
 They show interface behavior with generic QEMU disks, including disk inspection
 and six-disk ZFS layout selection. They are not
-exact-byte screenshots or acceptance evidence for the published ISO; the
-remaining exact-byte check is in [QA](QA.md).
+exact-byte screenshots or acceptance evidence for the published ISO. The
+published ISO's single-disk ext4 live smoke test and remaining matrix are in
+[QA](QA.md).
 
 | Capture | What it shows |
 | --- | --- |
