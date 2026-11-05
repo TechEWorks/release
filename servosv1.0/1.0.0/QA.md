@@ -53,6 +53,18 @@ the approved tree and build tree are both
   earlier ext4 disk was not selected or erased. This proves boot from either
   EFI member while both mirror disks are present; degraded-member boot and
   repair remain untested.
+- **Published-ISO mdadm RAID1/XFS test, 2026.11.05:** the same release ISO
+  installed on separate 8 GiB scratch disks with stable IDs ending
+  `drive-scsi4` and `drive-scsi5`. The final review showed both IDs, existing
+  partitions, mdadm RAID1 and XFS root before typed `ERASE`. All six install
+  tasks completed and saved a 254,698-byte log. With the ISO detached, VM225
+  cold-booted first with `scsi4` and then with `scsi5` as the sole firmware
+  boot source. The guest mounted XFS from `/dev/md/servos_root` and ext4 from
+  the mirrored boot array. `/proc/mdstat` showed both selected arrays active
+  RAID1 `[2/2] [UU]`; `mdadm --detail` reported the root array clean with
+  two active members and none failed. SSH, sudo and `apt update` passed on
+  the first boot; SSH and both arrays remained active on the second. This
+  proves both EFI boot paths with healthy members, not degraded boot or repair.
 - An earlier exact ISO from the same installer backend, SHA-256
   `7f0d27d40eac5dd1dd861ecf3afe610388a560d408702005cbe5045a2f4c4a5e`,
   passed on disposable PVE VM225: ext4 single-disk boot; ZFS two-disk mirror
