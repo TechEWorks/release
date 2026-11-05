@@ -65,3 +65,44 @@ ServOS does not configure Proxmox or alter a host's firmware boot order for
 you. Later software can be installed through APT or a TechE role installer.
 The optional `teche get wd1.0` catalog requires a separately published and
 pinned WorkDesk asset; it is not part of this ISO.
+
+## Restoring the same disk after a Btrfs RAID1 degraded boot
+
+The [published ISO QA](QA.md) cold-booted one two-disk Btrfs RAID1 layout with
+one member absent. It did not test replacing a failed disk with a new one.
+Keep console access and identify members by **stable disk ID**, not by an
+assumed `/dev/sd*` letter. Before rejoining a restored disk, check the root
+filesystem and the selected `/boot` array:
+
+```sh
+sudo btrfs filesystem show /
+cat /proc/mdstat
+sudo mdadm --detail /dev/md/servos_boot
+```
+
+After the original disk is reattached, scrub the Btrfs root and confirm a
+second scrub reports no errors. Stop and preserve the logs if either scrub
+reports uncorrectable errors.
+
+```sh
+sudo btrfs scrub start -B /
+sudo btrfs scrub status /
+sudo btrfs scrub start -B /
+sudo btrfs scrub status /
+```
+
+The older `/boot` RAID1 member did **not** rejoin automatically in QA. Compare
+the missing member's stable ID and `mdadm --examine` array UUID with
+`mdadm --detail /dev/md/servos_boot` before adding it. Substitute the
+verified partition path below; the command will overwrite stale contents on
+that member as it rebuilds.
+
+```sh
+sudo mdadm --examine /dev/disk/by-id/YOUR_RESTORED_DISK-part2
+sudo mdadm --manage /dev/md/servos_boot --add /dev/disk/by-id/YOUR_RESTORED_DISK-part2
+cat /proc/mdstat
+```
+
+Wait for `[2/2] [UU]`, reboot, then verify both Btrfs devices and both
+`/boot` members again. This procedure is for reattaching the **same** member
+of the tested layout. Other recovery paths remain open QA work.

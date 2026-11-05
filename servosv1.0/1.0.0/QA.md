@@ -83,7 +83,27 @@ the approved tree and build tree are both
   OpenSSH was active, key authentication enabled, password and direct root
   SSH login disabled. Key-only administrator sudo, `teche -v` and APT update
   succeeded. This tests one static/key path and both EFI sources with healthy
-  Btrfs members; it does not prove degraded boot or repair.
+  Btrfs members. The separate degraded-member check follows.
+- **Published-ISO Btrfs RAID1 degraded boot and manual recovery, 2026.11.05:**
+  VM225 was shut down and the `drive-scsi0` virtual disk was detached, without
+  deleting its volume. With `drive-scsi6` as the only EFI boot source, the
+  guest cold-booted to the ServOS console and accepted its SSH key. Btrfs
+  mounted `/` with device 1 reported `MISSING`; the selected ext4 `/boot`
+  array reported RAID1 `[2/1] [_U]`. The static route and SSH service worked.
+  After shutdown, the same disk was reattached. Btrfs detected both devices,
+  but the first scrub found stale blocks and corrected 56 verify errors with
+  none uncorrectable. A second scrub found no errors. A cold boot from the
+  restored `drive-scsi0` EFI succeeded, but `/boot` remained degraded: its
+  older member had the same array UUID and fewer events, so mdadm did not
+  automatically rejoin it. After verifying the member identities, QA ran
+  `mdadm --manage` to add that member. The array rebuilt to `[2/2] [UU]` and
+  `clean`; a subsequent reboot retained both active members and a working
+  SSH service. The ISO remained detached and both virtual volumes were
+  retained. This proves this one missing-member boot and *manual* repair
+  path. Automatic rejoin, replacement with a new disk, other layouts and
+  physical hardware remain untested. Btrfs device statistics retain 14
+  historical generation errors from the stale member despite the clean
+  second scrub; those counters were not reset for the report.
 - An earlier exact ISO from the same installer backend, SHA-256
   `7f0d27d40eac5dd1dd861ecf3afe610388a560d408702005cbe5045a2f4c4a5e`,
   passed on disposable PVE VM225: ext4 single-disk boot; ZFS two-disk mirror
@@ -104,7 +124,8 @@ published checksums remain immutable; the corrected public rebuild passed.
 The following paths are not claimed as passed for the published ISO:
 single-disk XFS and ZFS; representative ZFS RAIDZ, mdadm ext4 and other Btrfs
 layouts; other static IPv4 and SSH-key environments; separate physical directory
-partitions; degraded-member boot and repair; interrupted-install recovery;
+partitions; ZFS and mdadm degraded-member boot and repair, Btrfs replacement
+with a new disk and automatic recovery; interrupted-install recovery;
 failed network/mirror handling; and broader non-VirtIO hardware. The optional
 WorkDesk catalog requires a
 published pinned HTTPS ZIP and its matching SHA-256. A complete installed and
