@@ -70,7 +70,7 @@ These are unaltered VM225 captures from preceding installer candidates.
 They show interface behavior with generic QEMU disks, including disk inspection
 and six-disk ZFS layout selection. They are not
 exact-byte screenshots or acceptance evidence for the published ISO. The
-published ISO's single-disk ext4 and XFS, ZFS mirror, mdadm RAID1/XFS, and
+published ISO's single-disk ext4, XFS and ZFS, ZFS mirror, mdadm RAID1/XFS, and
 Btrfs RAID1 live tests, plus the static IPv4 and SSH-key path and open checks,
 are recorded in
 [QA](QA.md).
