@@ -14,7 +14,7 @@ The installed system is standalone and does not depend on Proxmox.
 text installer, inspect disk identity before the typed erase confirmation, and
 boot into a small SSH-ready base. The installer downloads the packages needed
 for the selected layout; applications can be added later. See three
-[real QA captures](#installer-and-first-boot-captures) below.
+[real QA captures](#installer-captures) below.
 
 ## Downloads and integrity
 
@@ -63,7 +63,7 @@ same tree through pull-request merge commit
 6. [Changes in this release](CHANGELOG.md)
 7. [Network ISO output record](outputs/network-iso/ReadMeFirst.txt)
 
-## Installer and first-boot captures
+## Installer captures
 
 These are unaltered VM225 captures from preceding installer candidates.
 They show interface behavior with generic QEMU disks, including disk inspection
