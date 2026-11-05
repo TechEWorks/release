@@ -1,0 +1,47 @@
+name: ServOS public source rebuild
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    container: debian:13.7-slim
+    steps:
+      - name: Install public build prerequisites
+        run: |
+          apt-get update
+          DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+            ca-certificates curl xorriso cpio xz-utils dpkg wget coreutils \
+            kmod unzip python3
+      - name: Download the public release as an independent user
+        shell: bash
+        run: |
+          set -euo pipefail
+          base=https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0
+          mkdir -p /tmp/servos-public-rebuild
+          cd /tmp/servos-public-rebuild
+          for name in TechE-ServOS-13.7-v1.0-SOURCE.zip BUILD-INPUT-Pinned-Base-ISO.iso SHA256SUMS.txt; do
+            curl --fail --location --retry 3 --output "$name" "$base/$name"
+          done
+          sha256sum --check --ignore-missing SHA256SUMS.txt
+          mkdir source
+          unzip -q TechE-ServOS-13.7-v1.0-SOURCE.zip -d source
+      - name: Run public source QA and build the ISO
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd /tmp/servos-public-rebuild/source
+          python3 qa/frame_contract_test.py
+          python3 qa/screen_walkthrough.py
+          python3 qa/message_audit.py
+          sh build-iso.sh \
+            /tmp/servos-public-rebuild/BUILD-INPUT-Pinned-Base-ISO.iso \
+            /tmp/servos-public-rebuild/servos-rebuilt.iso
+          cd /tmp/servos-public-rebuild
+          sha256sum servos-rebuilt.iso
+          test "$(stat -c %s servos-rebuilt.iso)" -gt 60000000
+          xorriso -indev servos-rebuilt.iso -report_el_torito plain
