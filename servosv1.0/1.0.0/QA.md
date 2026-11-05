@@ -27,6 +27,12 @@ the approved tree and build tree are both
 
 ## Post-release acceptance work
 
+The first independent public-source rebuild detected CRLF line endings in the
+source ZIP. The [public build guide](BUILD.md) now includes an explicit
+text-only LF normalization step before executing shell scripts. The source
+ZIP, ISO and their published checksums have not changed. The independent
+rebuild is being rerun against that corrected procedure.
+
 The following paths are not claimed as passed for the published ISO: a fresh
 end-to-end install and cold boot of the published bytes; single-disk XFS and
 ZFS; representative ZFS RAIDZ, mdadm ext4 and other Btrfs layouts; static IPv4;

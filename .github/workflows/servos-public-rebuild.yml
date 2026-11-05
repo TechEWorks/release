@@ -30,6 +30,14 @@ jobs:
           sha256sum --check --ignore-missing SHA256SUMS.txt
           mkdir source
           unzip -q TechE-ServOS-13.7-v1.0-SOURCE.zip -d source
+          python3 - <<'PY'
+          from pathlib import Path
+          for path in Path('source').rglob('*'):
+              if path.is_file():
+                  data = path.read_bytes()
+                  if b'\0' not in data and b'\r\n' in data:
+                      path.write_bytes(data.replace(b'\r\n', b'\n'))
+          PY
       - name: Run public source QA and build the ISO
         shell: bash
         run: |

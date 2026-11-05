@@ -37,6 +37,14 @@ It is **not** the deployable ServOS ISO.
 mkdir servos-source
 cd servos-source
 unzip -q ../TechE-ServOS-13.7-v1.0-SOURCE.zip
+python3 - <<'PY'
+from pathlib import Path
+for path in Path('.').rglob('*'):
+    if path.is_file():
+        data = path.read_bytes()
+        if b'\0' not in data and b'\r\n' in data:
+            path.write_bytes(data.replace(b'\r\n', b'\n'))
+PY
 python3 qa/frame_contract_test.py
 python3 qa/screen_walkthrough.py
 python3 qa/message_audit.py
@@ -61,3 +69,9 @@ license. Debian target packages are downloaded from configured repositories
 while installing on the destination. The builder also downloads pinned
 components; the build log records those checks. See [legal notices](LEGAL.md)
 for upstream licensing.
+
+**Source ZIP line endings:** the archived text files include Windows CRLF
+line endings. The normalization command above converts text to Unix LF after
+extracting the checksum-verified ZIP, before running shell scripts. It does
+not edit binary files or the released ISO. The public archive and its hash
+remain immutable.
