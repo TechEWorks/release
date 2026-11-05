@@ -44,11 +44,18 @@ identifies a release.
    later TechE role installation. Noninteractive SSH commands remain usable
    for automation. The WorkDesk download URL is still pending publication.
 
-These real VM QA captures show the text interface. They come from preceding
-installer candidates; see [exact release QA](1.0.0/QA.md) for tested scope.
+## Installer preview
 
-| Inspect before erasing | Choose eligible layouts |
-| --- | --- |
-| ![Existing OS, partitions and disk ID](1.0.0/screenshots/01-disk-inspection.png) | ![Six-disk ZFS layout choices](1.0.0/screenshots/03-zfs-layout-choices.png) |
+Inspect the model, serial, stable ID and existing partitions before selecting
+any disk for erasure.
 
-[See all three captures](1.0.0/README.md#installer-captures).
+![Disk identity and existing partitions](1.0.0/screenshots/01-disk-inspection.png)
+
+The available storage layouts follow the number of selected disks. The
+installer shows estimated capacity and failure tolerance before final review.
+
+![Eligible six-disk ZFS layouts](1.0.0/screenshots/03-zfs-layout-choices.png)
+
+These real VM captures came from preceding installer candidates. See the
+[published ISO QA record](1.0.0/QA.md) for exact release tests and open checks,
+or [all three installer captures](1.0.0/README.md#installer-captures).
