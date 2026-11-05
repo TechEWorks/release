@@ -15,7 +15,7 @@ standalone server that can be administered locally or over SSH.
 
 | What you need | Where to go |
 | --- | --- |
-| Download the installer ISO | [ServOS v1.0 release](1.0.0/README.md#downloads-and-integrity) |
+| Download the installer ISO | [ServOS v1.0 release](https://github.com/TechEWorks/release/releases/tag/servosv1.0-v1.0.0) |
 | See every storage, network and SSH setup feature | [Full feature path](1.0.0/FEATURES.md) |
 | Install on a server or VM | [Install guide](1.0.0/INSTALL.md) |
 | Download the code and build your own ISO | [Source and build guide](1.0.0/BUILD.md) |
