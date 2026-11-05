@@ -2,5 +2,15 @@
   "schema_version": 1,
   "product": "servos",
   "major_line": "1.0",
-  "releases": []
+  "releases": [
+    {
+      "version": "1.0.0",
+      "tag": "servosv1.0-v1.0.0",
+      "date": "2026.11.05",
+      "record": "1.0.0/README.md",
+      "manifest": "1.0.0/RELEASE-MANIFEST.json",
+      "qa": "1.0.0/QA.md",
+      "status": "public; post-release qualification open"
+    }
+  ]
 }

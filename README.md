@@ -1,11 +1,20 @@
 # TechEWorks releases
 
-This public catalog lists approved TechEWorks product releases. Editable product source, build workspaces and private QA evidence remain in each private product repository. Each published version includes a reviewed product source snapshot, accepted delivery artifacts, required notices and a public release record. Publication requires a separate verified promotion.
+This public catalog lists TechEWorks product releases. Each published version
+provides its buildable source snapshot, build and installation instructions,
+release artifacts, licensing, known limitations and an exact release record.
+Active development workspaces and private QA evidence remain in product
+repositories; their privacy does not restrict access to the published source.
+
+Shared TechEWorks standards are in [license](license/README.md) and
+[IP](ip/README.md). Every published product version also carries its own
+`LICENSE.txt` and component notices. Upstream components retain their own
+licenses.
 
 | Product | Public release index |
 | --- | --- |
 | WorkDesk 1.0 | [workdeskv1.0/index.json](workdeskv1.0/index.json) |
-| ServOS 1.0 | [servosv1.0/index.json](servosv1.0/index.json) |
+| ServOS 1.0 | [Product and download guide](servosv1.0/README.md) · [version index](servosv1.0/index.json) |
 | Fleet RMM 1.0 | [fleetrmmv1.0/index.json](fleetrmmv1.0/index.json) |
 | UCP 1.0 | [ucpv1.0/index.json](ucpv1.0/index.json) |
 | Maestro 1.0 | [maestrov1.0/index.json](maestrov1.0/index.json) |
