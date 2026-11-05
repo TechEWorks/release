@@ -39,6 +39,20 @@ the approved tree and build tree are both
   and exited successfully. The installed `teche -v` reported utility 1.0.0.
   This proves one ext4/DHCP/password path on the published bytes; it does not
   qualify other storage or network choices.
+- **Published-ISO ZFS mirror test, 2026.11.05:** the same release ISO installed
+  ZFS with `lz4` compression on two separate 8 GiB VM225 scratch disks, stable
+  IDs ending `drive-scsi1` and `drive-scsi2`. The final review listed both IDs
+  and their existing partitions before typed `ERASE`. All six install tasks
+  completed, and the installed log was 400,952 bytes. After detaching the ISO,
+  firmware boot order was set to `scsi1`, then in a separate cold boot to
+  `scsi2`. Both boots reached the ServOS console and SSH. The guest mounted its
+  root and `/boot` from ZFS datasets; `zpool status -P` showed both boot and
+  root pools `ONLINE` with both selected members and no known data errors.
+  SSH, sudo and `apt update` succeeded on the first boot; the second boot
+  reported active SSH and `zpool status -x` said all pools were healthy. The
+  earlier ext4 disk was not selected or erased. This proves boot from either
+  EFI member while both mirror disks are present; degraded-member boot and
+  repair remain untested.
 - An earlier exact ISO from the same installer backend, SHA-256
   `7f0d27d40eac5dd1dd861ecf3afe610388a560d408702005cbe5045a2f4c4a5e`,
   passed on disposable PVE VM225: ext4 single-disk boot; ZFS two-disk mirror
@@ -66,6 +80,11 @@ published pinned HTTPS ZIP and its matching SHA-256. A complete installed and
 ISO component SBOM, upstream notice audit and release signature are also
 post-release controls. They must be closed before claiming a mission-critical
 production qualification.
+
+The live ZFS test exposed a progress-label defect: task 1/6 still read
+"Check network" while the activity pane installed ZFS storage tools. The
+installation continued and booted, but the label needs correction in a future
+build so long package operations are accurately identified.
 
 For an incident, preserve the ISO SHA-256, selected disk stable IDs, storage
 layout, boot order and installer log. Send the details privately to
