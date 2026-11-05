@@ -65,6 +65,25 @@ the approved tree and build tree are both
   two active members and none failed. SSH, sudo and `apt update` passed on
   the first boot; SSH and both arrays remained active on the second. This
   proves both EFI boot paths with healthy members, not degraded boot or repair.
+- **Published-ISO Btrfs RAID1, static IPv4 and SSH-key test, 2026.11.05:**
+  the same release ISO installed on two 8 GiB scratch disks with stable IDs
+  ending `drive-scsi0` and `drive-scsi6`. The network screen first found a
+  DHCP offer; the installer then used that offered address as a temporary
+  manually configured static IPv4 address with the test gateway and DNS.
+  Its mirror check succeeded. Final review showed both existing disk contents,
+  Btrfs RAID1, zstd level 3, mirrored metadata, separate `/tmp`, `/var` and
+  `/home` subvolumes, static network and public-key access before typed
+  `ERASE`. All six install tasks completed in 3m36s and saved a 235,675-byte
+  log. With the ISO detached, VM225 cold-booted from `scsi0` and then from
+  `scsi6` as the sole firmware boot source, with both members present. Both
+  boots reached the ServOS console and accepted the ephemeral Ed25519 SSH
+  key. Btrfs reported two devices with Data and Metadata in RAID1 and zero
+  device errors; the selected mirrored `/boot` array was `[2/2] [UU]`.
+  The installed static route and separate subvolume mounts were present.
+  OpenSSH was active, key authentication enabled, password and direct root
+  SSH login disabled. Key-only administrator sudo, `teche -v` and APT update
+  succeeded. This tests one static/key path and both EFI sources with healthy
+  Btrfs members; it does not prove degraded boot or repair.
 - An earlier exact ISO from the same installer backend, SHA-256
   `7f0d27d40eac5dd1dd861ecf3afe610388a560d408702005cbe5045a2f4c4a5e`,
   passed on disposable PVE VM225: ext4 single-disk boot; ZFS two-disk mirror
@@ -84,7 +103,7 @@ published checksums remain immutable; the corrected public rebuild passed.
 
 The following paths are not claimed as passed for the published ISO:
 single-disk XFS and ZFS; representative ZFS RAIDZ, mdadm ext4 and other Btrfs
-layouts; static IPv4; SSH public-key access; separate physical directory
+layouts; other static IPv4 and SSH-key environments; separate physical directory
 partitions; degraded-member boot and repair; interrupted-install recovery;
 failed network/mirror handling; and broader non-VirtIO hardware. The optional
 WorkDesk catalog requires a
