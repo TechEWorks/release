@@ -15,8 +15,10 @@ product scope; [QA](QA.md) states which combinations have been live-tested.
    proceeding.
 3. **Inspect disks:** view media type, capacity, vendor, model, serial when
    reported by hardware, stable ID, controller address and existing
-   partitions. Active boot disks are identified and protected. Up to 64 disks
-   can be enumerated; only selected whole disks are erased.
+   partitions. Disks mounted or in use by the running installer are blocked.
+   An existing OS on an unmounted disk is flagged, but remains selectable
+   after a second Space press and the final typed `ERASE` review. Up to 64
+   disks can be enumerated; only selected whole disks are erased.
 4. **Choose DriveOS:** one disk offers ext4, XFS, Btrfs or ZFS. Valid
    multi-disk ZFS, mdadm or Btrfs layouts appear as the disk count permits.
    The interface gives usable-capacity and failure-tolerance estimates.

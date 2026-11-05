@@ -21,9 +21,11 @@
    operator can set a local time zone.
 3. Use DHCP, or enter static IPv4/prefix, gateway and DNS. Confirm the
    network check succeeds before installation.
-4. Inspect the disk list. Current boot disks are separated and unavailable.
-   For every target, compare model, serial, controller address, stable ID,
-   size and existing partitions. Select the intended whole disk or disks.
+4. Inspect the disk list. Mounted or otherwise active disks are unavailable;
+   an unmounted disk containing an existing OS is marked **OS PRESENT** and
+   requires a second Space press to select. For every target, compare model,
+   serial, controller address, stable ID, size and existing partitions.
+   Select only the intended whole disk or disks.
 5. Choose the storage family and layout that the selected disk count enables.
    A single disk can use ext4, XFS, Btrfs or ZFS. Multiple disks offer valid
    ZFS, mdadm or Btrfs layouts. Select compression and directory options when

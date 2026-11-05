@@ -14,6 +14,6 @@ Released 2026.11.05.
 - Shared TechE licensing and IP standards dated 2026.11.05; ServOS source
   adopts AGPL-3.0-only. Upstream components keep their own terms.
 
-The [QA record](QA.md) distinguishes passed source/build checks and earlier
-backend live tests from checks still open for this exact ISO. The WorkDesk
+The [QA record](QA.md) distinguishes passed source/build checks, exact-ISO
+live tests and remaining storage, hardware and recovery checks. The WorkDesk
 catalog is not configured until its public pinned asset is published.

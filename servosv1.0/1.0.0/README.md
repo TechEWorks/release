@@ -2,7 +2,14 @@
 
 Released 2026.11.05 by TechE.Works. Contact:
 [sysadmin@teche.works](mailto:sysadmin@teche.works) ·
-[teche.works](https://teche.works).
+[TechEWorks on GitHub](https://github.com/TechEWorks).
+
+ServOS was built for administrators who want a minimal Debian server on ZFS,
+multi-disk Btrfs or mdadm with ext4 or XFS without assembling each boot layout
+manually. Its console installer presents compatible storage choices together,
+then installs an SSH-ready base for remote role configuration after first boot.
+Debian Installer supports mdadm and optional SSH network-console installation;
+the difference here is the unified storage workflow and installed server setup.
 
 ServOS installs a minimal Debian 13.7 server from a compact network ISO.
 It installs the selected DriveOS storage, kernel and bootloader, networking,
@@ -13,8 +20,11 @@ The installed system is standalone and does not depend on Proxmox.
 **Why use it:** select one disk or a supported redundant layout in the same
 text installer, inspect disk identity before the typed erase confirmation, and
 boot into a small SSH-ready base. The installer downloads the packages needed
-for the selected layout; applications can be added later. See three
-[real QA captures](#installer-captures) below.
+for the selected layout; applications can be added later. The initial ISO
+setup requires a local or remote-management console. After boot, SSH can run
+the next setup steps; NetBird or another VPN client can then provide private
+remote reachability if the operator chooses. No VPN key or client is bundled.
+See three [real QA captures](#installer-captures) below.
 
 ## Downloads and integrity
 
