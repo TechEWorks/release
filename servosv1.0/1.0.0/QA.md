@@ -39,6 +39,18 @@ the approved tree and build tree are both
   and exited successfully. The installed `teche -v` reported utility 1.0.0.
   This proves one ext4/DHCP/password path on the published bytes; it does not
   qualify other storage or network choices.
+- **Published-ISO single-disk XFS test, 2026.11.05:** the same release ISO
+  installed with DHCP and password access on one 8 GiB VM225 scratch disk,
+  stable ID ending `drive-scsi4`. Its previous EFI and mdadm partitions were
+  listed at review before typed `ERASE`; no other disk was selected. All six
+  install tasks completed in 4m09s, and the installed log was 236,252 bytes.
+  After shutdown, the ISO was detached and firmware boot order set to `scsi4`.
+  A cold boot reached the ServOS console and SSH. The guest mounted XFS on `/`
+  and ext4 on `/boot`, reported an active SSH service, a sudo-group administrator,
+  and utility version 1.0.0. `apt-get update -qq` exited successfully. The
+  guest's Linux `/dev/sd*` letters changed across the install, so selection
+  and boot verification used the stable disk ID and PVE controller address.
+  This proves one XFS/DHCP/password path; it does not qualify other layouts.
 - **Published-ISO ZFS mirror test, 2026.11.05:** the same release ISO installed
   ZFS with `lz4` compression on two separate 8 GiB VM225 scratch disks, stable
   IDs ending `drive-scsi1` and `drive-scsi2`. The final review listed both IDs
@@ -122,7 +134,7 @@ after archive verification and before shell execution. The ZIP, ISO and their
 published checksums remain immutable; the corrected public rebuild passed.
 
 The following paths are not claimed as passed for the published ISO:
-single-disk XFS and ZFS; representative ZFS RAIDZ, mdadm ext4 and other Btrfs
+single-disk ZFS; representative ZFS RAIDZ, mdadm ext4 and other Btrfs
 layouts; other static IPv4 and SSH-key environments; separate physical directory
 partitions; ZFS and mdadm degraded-member boot and repair, Btrfs replacement
 with a new disk and automatic recovery; interrupted-install recovery;
