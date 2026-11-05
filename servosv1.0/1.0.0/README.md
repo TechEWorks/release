@@ -63,6 +63,15 @@ for independent verification.
   SSH, including kernel, CPU, network, DriveOS capacity and storage, GPU when
   present, and package commands.
 
+## First boot and SSH handoff
+
+This capture is from the exact published ISO's first-boot console. Interactive
+SSH uses the same system summary, then offers a remote setup menu or shell.
+The WorkDesk menu action needs a separately published, pinned package; the
+administrator shell and noninteractive SSH remain available for other roles.
+
+![Published ISO first-boot system display, also shown on interactive SSH](screenshots/04-published-iso-first-boot-console.png)
+
 ## Guides and release record
 
 1. [Install and first boot](INSTALL.md)
