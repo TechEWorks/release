@@ -16,9 +16,15 @@ storage layout.
 **DriveOS** is the name of the boot disk or disk set; **TechE ServOS** is the
 system installed on it.
 
-[Download the installer ISO](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/TechE-ServOS-13.7-v1.0-amd64-network.iso) ·
-[See how installation works](1.0.0/INSTALL.md) ·
-[Build it from public source](1.0.0/BUILD.md)
+## Start here
+
+- **Deploy a server:** [download the installer ISO](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/TechE-ServOS-13.7-v1.0-amd64-network.iso),
+  [verify its SHA-256](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/SHA256SUMS.txt)
+  and follow the [install guide](1.0.0/INSTALL.md).
+- **Build your own ISO:** download the [public source ZIP](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/TechE-ServOS-13.7-v1.0-SOURCE.zip)
+  and follow the [build guide](1.0.0/BUILD.md).
+- **Evaluate the release:** read the [full feature path](1.0.0/FEATURES.md)
+  and [exact-release QA record](1.0.0/QA.md).
 
 ## One small base, many possible systems
 
@@ -120,11 +126,13 @@ version record.
 ## Download, verify or build
 
 The **1.0.0** release includes a 71,696,384-byte network installer ISO, its
-source ZIP, pinned base ISO, manifest and SHA-256 checksums. The exact release
-ISO has live VM installation and cold-boot evidence for single-disk ext4, XFS
-and ZFS; ZFS mirror; mdadm RAID1 with XFS; and Btrfs RAID1. The QA record
-states the limits of those tests and the storage, recovery and hardware paths
-still open.
+source ZIP, pinned base ISO, manifest and SHA-256 checksums. An
+[independent public rebuild](https://github.com/TechEWorks/release/actions/runs/41983978934)
+produced a byte-identical ISO from the published build inputs. The exact
+release ISO has live VM installation and cold-boot evidence for single-disk
+ext4, XFS and ZFS; ZFS mirror; mdadm RAID1 with XFS; and Btrfs RAID1. The QA
+record states the limits of those tests and the storage, recovery and hardware
+paths still open.
 
 | Start with | Link |
 | --- | --- |
