@@ -36,13 +36,41 @@ system installed on it.
 | GPU or LLM node | Hardware drivers, model runtime and workloads suited to that GPU |
 | Custom server | Only the packages, network access and services that role requires |
 
-The same minimal base can be installed on a single disk or on a supported ZFS,
-Btrfs or mdadm layout. The installer enumerates **up to 64 drives** and offers
-storage choices compatible with the selected count. ext4 and XFS are available
-on one disk or as filesystems over supported mdadm arrays; ZFS and Btrfs have
-their own eligible single- and multi-disk layouts. USB is limited to a
-single-disk target. Inspect identities, capacity and existing partitions
-before the typed erase confirmation.
+## Choose the DriveOS layout
+
+The installer can inspect and select **up to 64 whole drives**. Select the
+drives you have; ServOS shows the layouts eligible for that count. RAID1 is
+one choice among several, and mixed drive sizes are allowed with a capacity
+warning. A USB target can be used only as a single drive.
+
+| Selected drives | Layouts offered by the installer |
+| --- | --- |
+| 1 | ext4, XFS, Btrfs or ZFS |
+| 2–64, ZFS | Mirror or stripe; RAIDZ1 from 3, RAIDZ2 from 4, RAIDZ3 from 5, and mirror pairs with an even count of at least 4 |
+| 2–64, mdadm | RAID0, RAID1 or RAID10; RAID5 from 3 and RAID6 from 4; ext4 or XFS over the array |
+| 2–64, Btrfs | Single, RAID0 or RAID1; RAID1C3 from 3 and RAID10 or RAID1C4 from 4 |
+
+Here are practical starting points, not limits on what the menu permits:
+
+| Drives selected | A real-world starting point | Example layout |
+| --- | --- | --- |
+| 1 | A small monitoring or utility server where simple storage matters most | ext4 or XFS; no disk redundancy |
+| 2 | A remote Docker Engine or WorkDesk base that should tolerate one disk failure | ZFS mirror, mdadm RAID1 with ext4/XFS, or Btrfs RAID1 |
+| 3 | A capacity-focused application host | ZFS RAIDZ1 or mdadm RAID5; tolerates one drive failure |
+| 4 | A VM or database host with frequent random I/O | ZFS mirror pairs, mdadm RAID10, or Btrfs RAID10 |
+| 6 | A storage-heavy application or backup repository | ZFS RAIDZ2 or mdadm RAID6; tolerates two drive failures |
+| 8 | A larger archival or model repository | ZFS RAIDZ3; tolerates three drive failures |
+
+The installer filters layouts by drive count and displays estimated capacity
+and failure tolerance; the operator chooses the result that fits the workload.
+Mixed capacities are selectable, but the installer warns when sizes differ.
+RAID does not replace backups. The [QA record](1.0.0/QA.md) distinguishes
+these available choices from layouts cold-booted on the published ISO.
+
+Storage behavior behind the examples is described by
+[OpenZFS](https://openzfs.github.io/openzfs-docs/Basic%20Concepts/Pool%20Structure/VDEVs.html),
+[Btrfs](https://btrfs.readthedocs.io/en/stable/mkfs.btrfs.html) and the
+[mdadm manual](https://man7.org/linux/man-pages/man8/mdadm.8.html).
 
 Once booted, the machine is reachable by SSH on a connected network. Use the
 administrator shell, APT or a later role installer to provision the next
@@ -128,11 +156,11 @@ version record.
 The **1.0.0** release includes a 71,696,384-byte network installer ISO, its
 source ZIP, pinned base ISO, manifest and SHA-256 checksums. An
 [independent public rebuild](https://github.com/TechEWorks/release/actions/runs/41983978934)
-produced a byte-identical ISO from the published build inputs. The exact
-release ISO has live VM installation and cold-boot evidence for single-disk
-ext4, XFS and ZFS; ZFS mirror; mdadm RAID1 with XFS; and Btrfs RAID1. The QA
-record states the limits of those tests and the storage, recovery and hardware
-paths still open.
+produced a byte-identical ISO from the published build inputs. **The following
+are tested examples, not the limit of the layout menu:** the exact release
+ISO has live VM installation and cold-boot evidence for single-disk ext4, XFS
+and ZFS; ZFS mirror; mdadm RAID1 with XFS; and Btrfs RAID1. The QA record
+states the other storage, recovery and hardware paths still open.
 
 | Start with | Link |
 | --- | --- |

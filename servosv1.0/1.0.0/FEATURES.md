@@ -38,6 +38,25 @@ product scope; [QA](QA.md) states which combinations have been live-tested.
    memory, DriveOS usage, boot/storage inventory, GPU when present, and APT
    commands.
 
+## DriveOS choices by selected drive count
+
+The installer can enumerate and select up to 64 whole drives. It recalculates
+the eligible storage menu when the selection changes; RAID1 is one of several
+choices. This is menu availability, while [QA](QA.md) records which choices
+have cold-booted on the published ISO.
+
+| Selected drives | Storage choices offered |
+| --- | --- |
+| 1 | ext4, XFS, Btrfs or ZFS |
+| 2–64, ZFS | Mirror or stripe; RAIDZ1 at 3+, RAIDZ2 at 4+, RAIDZ3 at 5+, mirror pairs at even counts of 4+ |
+| 2–64, mdadm | RAID0, RAID1 or RAID10; RAID5 at 3+, RAID6 at 4+; ext4 or XFS root filesystem |
+| 2–64, Btrfs | Single, RAID0 or RAID1; RAID1C3 at 3+, RAID10 and RAID1C4 at 4+ |
+
+Mixed drive capacities are selectable with a warning. USB is a single-drive
+target only. The interface shows estimated usable capacity and failure
+tolerance for the selected layout; the administrator makes the final choice.
+See [practical examples](../README.md#choose-the-driveos-layout).
+
 ## Remote setup over SSH
 
 After ServOS has booted and joined the network, an administrator can SSH into
