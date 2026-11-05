@@ -57,6 +57,8 @@ sha256sum servos-rebuilt.iso
 
 The official ISO SHA-256 is
 `b449436c0575a0dd95d61a3a228b0cbe465f415b64dea392352b1da2c04556cf`.
+The [independent public rebuild](https://github.com/TechEWorks/release/actions/runs/41983978934)
+followed these steps and produced that exact hash.
 Different tool versions or archive metadata can change an independently
 rebuilt image's bytes; a changed hash identifies a new build and requires its
 own boot and install QA. Do not present a rebuilt image as the official

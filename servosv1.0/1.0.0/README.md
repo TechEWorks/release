@@ -34,7 +34,8 @@ The ISO was built from private product source commit
 `f805c77e945ec6ad0331edda074f3dd08b4b3c9e`. The CI run used the
 same tree through pull-request merge commit
 `3aabc441a3da27267cbb5980e91839b51e55f0c3`. See the
-[build guide](BUILD.md) for an independent rebuild.
+[build guide](BUILD.md) and the [byte-identical public rebuild](QA.md#verified-checks)
+for independent verification.
 
 ## What the installer offers
 
