@@ -1,10 +1,10 @@
 # WorkDesk v1.0 — WD(txt) network QA preview 23
 
-This public prerelease exposes the exact ISO that was tested in disposable VMs on 6 November 2026. It is a **QA preview**, not a passed product release. Use an isolated, disposable UEFI VM and blank test disks only. Do not deploy it on a production machine or a network where open SSH/RDP listeners are unacceptable.
+This is the prepared public record for the exact ISO tested in disposable VMs on 6 November 2026. **The download is not yet published.** It is a QA candidate, not a passed product release. When available, use it only in an isolated, disposable UEFI VM with blank test disks. Do not deploy it on a production machine or a network where open SSH/RDP listeners are unacceptable.
 
 ## Download and verify
 
-Download `TechE-WDtxt-Network-v1.0-d358c44-QA23.iso` from the [GitHub prerelease](https://github.com/TechEWorks/release/releases/tag/workdeskv1.0-v1.0.0-qa.23). Its exact size is **74,842,112 bytes** and SHA-256 is `33e876edc0a2397f64c02ef176e4be7b7248827d3dfb3c6096493c6c1d181738`. The [checksums](SHA256SUMS.txt) and [manifest](RELEASE-MANIFEST.json) also cover the source archive, pinned ServOS base and visual asset pack. No release signature is claimed.
+The proposed ISO is `TechE-WDtxt-Network-v1.0-d358c44-QA23.iso`. Its exact size is **74,842,112 bytes** and SHA-256 is `33e876edc0a2397f64c02ef176e4be7b7248827d3dfb3c6096493c6c1d181738`. The [checksums](SHA256SUMS.txt) and [manifest](RELEASE-MANIFEST.json) also identify the source archive, pinned ServOS base and visual asset pack as proposed supporting files. No release signature is claimed.
 
 On Linux or macOS, run `sha256sum TechE-WDtxt-Network-v1.0-d358c44-QA23.iso`. On Windows PowerShell, run `Get-FileHash .\TechE-WDtxt-Network-v1.0-d358c44-QA23.iso -Algorithm SHA256`. Compare the entire digest before booting.
 
@@ -27,4 +27,4 @@ The approved [WorkDesk release index](../../index.json) remains empty. This prev
 
 ## Rebuild inputs
 
-The prerelease includes the tested ISO, its exact source ZIP, the pinned ServOS base ISO, the WorkDesk visual ZIP, `SHA256SUMS.txt` and `RELEASE-MANIFEST.json`. The source archive corresponds to private WorkDesk commit `d358c44b59b6055758d0ce48a5fc918b8efa9e73`. The visual archive is also pinned at a public GitHub URL in the core pack. These files document the candidate; no fully reproducible rebuild or signed supply-chain claim is made.
+The proposed publication set is the tested ISO, its exact source ZIP, the pinned ServOS base ISO, the WorkDesk visual ZIP, `SHA256SUMS.txt` and `RELEASE-MANIFEST.json`. Only this record and the two text metadata files are public at present; the ISO and supporting files have **not** been attached to a GitHub prerelease. The source archive corresponds to private WorkDesk commit `d358c44b59b6055758d0ce48a5fc918b8efa9e73`. The visual archive is also pinned at an existing public GitHub URL in the core pack. No fully reproducible rebuild or signed supply-chain claim is made.

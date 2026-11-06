@@ -3,6 +3,7 @@
   "product": "TechE WorkDesk v1.0",
   "edition": "wd-txt-network",
   "channel": "qa-preview",
+  "publication_status": "pending-asset-approval",
   "tag": "workdeskv1.0-v1.0.0-qa.23",
   "production_approved": false,
   "source_repository": "TechEWorks/workdeskv1.0",
