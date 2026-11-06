@@ -3,13 +3,15 @@
   "product": "TechE WorkDesk v1.0",
   "edition": "wd-txt-network",
   "channel": "qa-preview",
-  "publication_status": "pending-asset-approval",
+  "publication_status": "qa-preview-iso-published-supporting-assets-pending",
   "tag": "workdeskv1.0-v1.0.0-qa.23",
   "production_approved": false,
   "source_repository": "TechEWorks/workdeskv1.0",
   "source_commit": "d358c44b59b6055758d0ce48a5fc918b8efa9e73",
   "tested_environment": "Disposable Proxmox UEFI VMs; observed single-disk 4-vCPU, 8-GiB RAM, 64-GiB test profile",
   "signature": null,
+  "published_assets": ["TechE-WDtxt-Network-v1.0-d358c44-QA23.iso", "SHA256SUMS-ISO.txt"],
+  "proposed_unpublished_assets": ["WDtxt-QA23-ZFS-MOUNT-SOURCE-20261106.zip", "TechE-ServOS-13.7-v1.0-v69w-clean-signatures.iso", "WorkDesk-v1.0-visual-assets.zip"],
   "artifacts": [
     {
       "role": "bootable-network-installer",
