@@ -13,7 +13,7 @@ licenses.
 
 | Product | Public release index |
 | --- | --- |
-| WorkDesk 1.0 | [workdeskv1.0/index.json](workdeskv1.0/index.json) |
+| WorkDesk 1.0 | [Product and download guide](workdeskv1.0/README.md) · [approved release index](workdeskv1.0/index.json) |
 | ServOS 1.0 | [Product and download guide](servosv1.0/README.md) · [version index](servosv1.0/index.json) |
 | Fleet RMM 1.0 | [fleetrmmv1.0/index.json](fleetrmmv1.0/index.json) |
 | UCP 1.0 | [ucpv1.0/index.json](ucpv1.0/index.json) |

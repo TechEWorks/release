@@ -1,15 +1,22 @@
-# WorkDesk v1.0 releases
+# TechE WorkDesk v1.0
 
-This folder is the public WorkDesk release record. The private product workspace is [TechEWorks/workdeskv1.0](https://github.com/TechEWorks/workdeskv1.0). The [index](index.json) lists approved published releases only.
+WorkDesk is the TechE.Works desktop system. Three installer formats are planned; each delivers the same WorkDesk product through a different setup route.
 
-A published release can contain these asset types:
+| Installer | Status | What it does |
+| --- | --- | --- |
+| **WD(txt) network** | [QA preview 23](https://github.com/TechEWorks/release/releases/tag/workdeskv1.0-v1.0.0-qa.23) | Boots a text installer and downloads its pinned WorkDesk assets and Debian packages over the network. |
+| **WD(gui) network** | Coming soon | Graphical installer with network delivery. |
+| **WD(gui) offline** | Coming soon | Graphical installer with the required payload on the installation media. |
 
-- **GUI installer ISO:** graphical live environment and installation flow.
-- **Text installer ISO:** network or offline text installation flow.
-- **Shared WorkDesk core image:** the exact same approved bytes and SHA-256 must be used by both installer paths for the same release.
-- **Update artifacts:** versioned packages or images for an approved upgrade path.
-- **Release manifest, checksums, and signature:** asset names, byte counts, SHA-256 values, UTC release time, source commit, channel, compatibility, QA result, and rollback instructions.
+## WD(txt) network QA preview
 
-Large binaries are attached to a GitHub Release in the public `TechEWorks/release` repository. The Git tag must include the product name and version, for example `workdeskv1.0-v1.0.0-beta.1`. File paths under this folder contain release records; they are not a private workspace. Consumers must pin the exact tag, asset, byte count, and SHA-256.
+**This preview is for an isolated, disposable UEFI virtual machine. It is not an approved production release.** The ISO erases disks selected during installation. Read the [preview record, setup steps and known issues](previews/qa23/README.md) before booting it.
 
-No WorkDesk release has been published in this catalog yet. Candidate builds in the private source repository are not automatically installable releases.
+1. Download the ISO from the [QA preview release](https://github.com/TechEWorks/release/releases/tag/workdeskv1.0-v1.0.0-qa.23).
+2. Verify its SHA-256 against the [exact preview manifest](previews/qa23/RELEASE-MANIFEST.json) or [checksums](previews/qa23/SHA256SUMS.txt).
+3. Attach it to a **disposable** UEFI VM with a blank test disk and working internet. The observed QA profile used 4 logical CPUs, 8 GiB RAM and a 64 GiB disk.
+4. Follow the installer, inspect the selected disk and erasure warning, and finish setup. Detach the ISO before booting the installed disk.
+
+The preview ISO is **74,842,112 bytes** (about 71.4 MiB). It is small because the installation downloads its pinned content. Installation speed depends on the network and host; the observed QA install stage exceeded 12 minutes. The linked record identifies what passed, what failed and what remains untested.
+
+The [approved release index](index.json) remains empty until WorkDesk passes its release gates. The QA preview is deliberately excluded from that index. Source and build-input snapshots for this preview are attached to its GitHub prerelease; TechE and upstream component licences remain applicable.
