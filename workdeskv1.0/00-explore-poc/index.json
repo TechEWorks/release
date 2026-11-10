@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "catalog_type": "stage_assets",
+  "product_id": "workdeskv1.0",
+  "product_version": "1.0",
+  "stage_id": "00-explore-poc",
+  "publication_state": "NO_APPROVED_PUBLIC_ASSETS",
+  "active_stage_materialized": false,
+  "stage_users": {
+    "label": "PoC users",
+    "public_assets": []
+  },
+  "stage_testers": {
+    "label": "PoC testers",
+    "public_assets": []
+  },
+  "assets": [],
+  "approval_note": "Catalog only. No binary, source release, tested candidate, or QA PASS is asserted.",
+  "source_authority": "TechEWorks/workdeskv1.0",
+  "standards_authority": "TechEWorks/standards/s4.txt",
+  "standards_clauses": [
+    "06.17",
+    "06.18",
+    "07.22",
+    "07.23",
+    "08.12",
+    "08.13",
+    "21.10",
+    "21.11"
+  ]
+}
