@@ -4,6 +4,12 @@
 
 ![Actual QA23 WorkDesk desktop after installation](previews/qa23/screenshots/01-workdesk-desktop.png)
 
+## Stage-specific downloads and testers
+
+The seven S4 stages each have their own users, testers, asset selections and QA. Stage catalogs are [00 PoC](00-explore-poc/README.md), [01 Strawman](01-strawman/README.md), [02 Alpha](02-alpha/README.md), [03 Beta](03-beta/README.md), [04 Base Release](04-base-release/README.md), [05 Install/Deploy](05-install-deploy/README.md) and [06 Support](06-support/README.md). The [Alpha catalog](02-alpha/index.json) indexes previously published QA assets and installer dependencies; other stage catalogs currently record no approved public assets. A stage catalog is not the [approved product-release index](index.json), which remains empty.
+
+Only cleared public preview assets are downloadable without repository access; internal source, unapproved binaries and restricted test evidence are private. Each stage verifies exact producer SHA-256 and executes its own QA, even when reusing another stage's asset. Newly published files require a single lossless ZIP, with native and ZIP each strictly below 2,000,000,000 decimal bytes. Existing public native QA assets are marked as legacy previews rather than falsely treated as compliant new ZIP publications.
+
 ## Why WorkDesk
 
 | Design choice | Practical value | Current evidence and limit |
