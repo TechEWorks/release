@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "catalog_type": "stage_assets",
+  "product_id": "workdeskv1.0",
+  "product_version": "1.0",
+  "stage_id": "02-alpha",
+  "publication_state": "EXISTING_LEGACY_PREVIEW_ASSETS_NOT_APPROVED_PRODUCT_RELEASE",
+  "active_stage_materialized": true,
+  "stage_users": {
+    "label": "Alpha users",
+    "public_assets": "See assets[]; legacy QA previews only"
+  },
+  "stage_testers": {
+    "label": "Alpha testers",
+    "public_assets": "See assets[]; verify exact original SHA-256 and test limitations"
+  },
+  "asset_policy": "S4: new original and one-file ZIP each < 2,000,000,000 bytes; legacy native releases identified explicitly.",
+  "source_authority": "TechEWorks/workdeskv1.0/02-alpha",
+  "approved_release_catalog": "../index.json",
+  "assets": [
+    {
+      "asset_id": "legacy-workdeskv1.0-v1.0.0-qa.23-718908159",
+      "kind": "checksum",
+      "filename": "SHA256SUMS-ISO.txt",
+      "producer_stage": "02-alpha",
+      "producer_route": null,
+      "original_bytes": 108,
+      "original_sha256": "d66414c9d509eb11660745105219c63cfd628b50a3f5404b5b6b03ca2c91b0f7",
+      "distribution_format": "LEGACY_PREVIEW_NATIVE",
+      "transport_url": "https://github.com/TechEWorks/release/releases/download/workdeskv1.0-v1.0.0-qa.23/SHA256SUMS-ISO.txt",
+      "transport_release_tag": "workdeskv1.0-v1.0.0-qa.23",
+      "transport_asset_id": 718908159,
+      "audiences": [
+        "stage_users",
+        "stage_testers"
+      ],
+      "distribution_state": "EXISTING_PUBLIC_QA_PREVIEW_OR_INPUT",
+      "rights_review": "NOT_REVERIFIED",
+      "qa_scope": "Candidate-specific evidence only; no product or Stable QA approval",
+      "approved_product_release": false,
+      "notes": "Previously published native GitHub asset; not a new single-ZIP publication under S4."
+    },
+    {
+      "asset_id": "legacy-workdeskv1.0-v1.0.0-qa.23-718907428",
+      "kind": "iso",
+      "filename": "TechE-WDtxt-Network-v1.0-d358c44-QA23.iso",
+      "producer_stage": "02-alpha",
+      "producer_route": "wd-txt-network",
+      "original_bytes": 74842112,
+      "original_sha256": "33e876edc0a2397f64c02ef176e4be7b7248827d3dfb3c6096493c6c1d181738",
+      "distribution_format": "LEGACY_PREVIEW_NATIVE",
+      "transport_url": "https://github.com/TechEWorks/release/releases/download/workdeskv1.0-v1.0.0-qa.23/TechE-WDtxt-Network-v1.0-d358c44-QA23.iso",
+      "transport_release_tag": "workdeskv1.0-v1.0.0-qa.23",
+      "transport_asset_id": 718907428,
+      "audiences": [
+        "stage_users",
+        "stage_testers"
+      ],
+      "distribution_state": "EXISTING_PUBLIC_QA_PREVIEW_OR_INPUT",
+      "rights_review": "NOT_REVERIFIED",
+      "qa_scope": "Candidate-specific evidence only; no product or Stable QA approval",
+      "approved_product_release": false,
+      "notes": "Previously published native GitHub asset; not a new single-ZIP publication under S4."
+    },
+    {
+      "asset_id": "legacy-workdesk-gui-inputs-v1.0-qa20261109-727014191",
+      "kind": "root_image",
+      "filename": "01-workdesk-base-xz-bcj.squashfs",
+      "producer_stage": "02-alpha",
+      "producer_route": null,
+      "original_bytes": 1625796608,
+      "original_sha256": "7d69967ba3f86a30fdcd625121826f4b099978aa485479ecca415927d83f0861",
+      "distribution_format": "LEGACY_PREVIEW_NATIVE",
+      "transport_url": "https://github.com/TechEWorks/release/releases/download/workdesk-gui-inputs-v1.0-qa20261109/01-workdesk-base-xz-bcj.squashfs",
+      "transport_release_tag": "workdesk-gui-inputs-v1.0-qa20261109",
+      "transport_asset_id": 727014191,
+      "audiences": [
+        "stage_users",
+        "stage_testers"
+      ],
+      "distribution_state": "EXISTING_PUBLIC_QA_PREVIEW_OR_INPUT",
+      "rights_review": "NOT_REVERIFIED",
+      "qa_scope": "Candidate-specific evidence only; no product or Stable QA approval",
+      "approved_product_release": false,
+      "notes": "Previously published native GitHub asset; not a new single-ZIP publication under S4."
+    },
+    {
+      "asset_id": "legacy-workdesk-gui-inputs-v1.0-qa20261109-726817073",
+      "kind": "root_image",
+      "filename": "01-workdesk-base.squashfs",
+      "producer_stage": "02-alpha",
+      "producer_route": null,
+      "original_bytes": 1919311872,
+      "original_sha256": "b173d953926b020d6c7ff12d035c8b43d89313036f64f045739d4398f8a73ced",
+      "distribution_format": "LEGACY_PREVIEW_NATIVE",
+      "transport_url": "https://github.com/TechEWorks/release/releases/download/workdesk-gui-inputs-v1.0-qa20261109/01-workdesk-base.squashfs",
+      "transport_release_tag": "workdesk-gui-inputs-v1.0-qa20261109",
+      "transport_asset_id": 726817073,
+      "audiences": [
+        "stage_users",
+        "stage_testers"
+      ],
+      "distribution_state": "EXISTING_PUBLIC_QA_PREVIEW_OR_INPUT",
+      "rights_review": "NOT_REVERIFIED",
+      "qa_scope": "Candidate-specific evidence only; no product or Stable QA approval",
+      "approved_product_release": false,
+      "notes": "Previously published native GitHub asset; not a new single-ZIP publication under S4."
+    },
+    {
+      "asset_id": "legacy-workdesk-gui-inputs-v1.0-qa20261109-727390602",
+      "kind": "installer_package",
+      "filename": "calamares_3.3.14-1+teche8wdnative3.4_amd64.deb",
+      "producer_stage": "02-alpha",
+      "producer_route": null,
+      "original_bytes": 3402980,
+      "original_sha256": "ba1974978bc8a7d86bde1c799b3c1a43754292bba8237abae5ab1c07cc2a8c5c",
+      "distribution_format": "LEGACY_PREVIEW_NATIVE",
+      "transport_url": "https://github.com/TechEWorks/release/releases/download/workdesk-gui-inputs-v1.0-qa20261109/calamares_3.3.14-1%2Bteche8wdnative3.4_amd64.deb",
+      "transport_release_tag": "workdesk-gui-inputs-v1.0-qa20261109",
+      "transport_asset_id": 727390602,
+      "audiences": [
+        "stage_users",
+        "stage_testers"
+      ],
+      "distribution_state": "EXISTING_PUBLIC_QA_PREVIEW_OR_INPUT",
+      "rights_review": "NOT_REVERIFIED",
+      "qa_scope": "Candidate-specific evidence only; no product or Stable QA approval",
+      "approved_product_release": false,
+      "notes": "Previously published native GitHub asset; not a new single-ZIP publication under S4."
+    },
+    {
+      "asset_id": "legacy-workdesk-gui-inputs-v1.0-qa20261109-727389161",
+      "kind": "build_input_archive",
+      "filename": "teche-gui-config-qa274.tar.xz",
+      "producer_stage": "02-alpha",
+      "producer_route": null,
+      "original_bytes": 9289436,
+      "original_sha256": "b5cfa4108144c961b123bf289be6e1023b1298365e2dfd0bd72d6d338b41283e",
+      "distribution_format": "LEGACY_PREVIEW_NATIVE",
+      "transport_url": "https://github.com/TechEWorks/release/releases/download/workdesk-gui-inputs-v1.0-qa20261109/teche-gui-config-qa274.tar.xz",
+      "transport_release_tag": "workdesk-gui-inputs-v1.0-qa20261109",
+      "transport_asset_id": 727389161,
+      "audiences": [
+        "stage_users",
+        "stage_testers"
+      ],
+      "distribution_state": "EXISTING_PUBLIC_QA_PREVIEW_OR_INPUT",
+      "rights_review": "NOT_REVERIFIED",
+      "qa_scope": "Candidate-specific evidence only; no product or Stable QA approval",
+      "approved_product_release": false,
+      "notes": "Previously published native GitHub asset; not a new single-ZIP publication under S4."
+    },
+    {
+      "asset_id": "legacy-workdesk-gui-inputs-v1.0-qa20261109-727558221",
+      "kind": "iso",
+      "filename": "TechE-WDgui-Network-v1.0-QA279.iso",
+      "producer_stage": "02-alpha",
+      "producer_route": "wd-gui-network",
+      "original_bytes": 73793536,
+      "original_sha256": "e1ce2d7572be3e3f279ab63e3d3a5844774450fb34a2096d9a06fd0508e00b26",
+      "distribution_format": "LEGACY_PREVIEW_NATIVE",
+      "transport_url": "https://github.com/TechEWorks/release/releases/download/workdesk-gui-inputs-v1.0-qa20261109/TechE-WDgui-Network-v1.0-QA279.iso",
+      "transport_release_tag": "workdesk-gui-inputs-v1.0-qa20261109",
+      "transport_asset_id": 727558221,
+      "audiences": [
+        "stage_users",
+        "stage_testers"
+      ],
+      "distribution_state": "EXISTING_PUBLIC_QA_PREVIEW_OR_INPUT",
+      "rights_review": "NOT_REVERIFIED",
+      "qa_scope": "Candidate-specific evidence only; no product or Stable QA approval",
+      "approved_product_release": false,
+      "notes": "Previously published native GitHub asset; not a new single-ZIP publication under S4."
+    },
+    {
+      "asset_id": "legacy-workdesk-gui-inputs-v1.0-qa20261109-727591972",
+      "kind": "checksum",
+      "filename": "TechE-WDgui-Network-v1.0-QA279.iso.sha256",
+      "producer_stage": "02-alpha",
+      "producer_route": "wd-gui-network",
+      "original_bytes": 101,
+      "original_sha256": "a878bef1dcae5b239d048a681d1ba39325f7616bd307d5d8386841871638eefa",
+      "distribution_format": "LEGACY_PREVIEW_NATIVE",
+      "transport_url": "https://github.com/TechEWorks/release/releases/download/workdesk-gui-inputs-v1.0-qa20261109/TechE-WDgui-Network-v1.0-QA279.iso.sha256",
+      "transport_release_tag": "workdesk-gui-inputs-v1.0-qa20261109",
+      "transport_asset_id": 727591972,
+      "audiences": [
+        "stage_users",
+        "stage_testers"
+      ],
+      "distribution_state": "EXISTING_PUBLIC_QA_PREVIEW_OR_INPUT",
+      "rights_review": "NOT_REVERIFIED",
+      "qa_scope": "Candidate-specific evidence only; no product or Stable QA approval",
+      "approved_product_release": false,
+      "notes": "Previously published native GitHub asset; not a new single-ZIP publication under S4."
+    },
+    {
+      "asset_id": "legacy-workdesk-gui-inputs-v1.0-qa20261109-727440083",
+      "kind": "iso",
+      "filename": "TechE-WDtxt-Network-v1.0-QA29.iso",
+      "producer_stage": "02-alpha",
+      "producer_route": "wd-txt-network",
+      "original_bytes": 74842112,
+      "original_sha256": "21fddbccce6193e032e309e11fe6cbb853fb4a346cec86553733f4f19ab4b92c",
+      "distribution_format": "LEGACY_PREVIEW_NATIVE",
+      "transport_url": "https://github.com/TechEWorks/release/releases/download/workdesk-gui-inputs-v1.0-qa20261109/TechE-WDtxt-Network-v1.0-QA29.iso",
+      "transport_release_tag": "workdesk-gui-inputs-v1.0-qa20261109",
+      "transport_asset_id": 727440083,
+      "audiences": [
+        "stage_users",
+        "stage_testers"
+      ],
+      "distribution_state": "EXISTING_PUBLIC_QA_PREVIEW_OR_INPUT",
+      "rights_review": "NOT_REVERIFIED",
+      "qa_scope": "Candidate-specific evidence only; no product or Stable QA approval",
+      "approved_product_release": false,
+      "notes": "Previously published native GitHub asset; not a new single-ZIP publication under S4."
+    },
+    {
+      "asset_id": "legacy-workdesk-gui-inputs-v1.0-qa20261109-726787056",
+      "kind": "build_input_archive",
+      "filename": "WorkDesk-GUI-build-inputs-v1.0.tar",
+      "producer_stage": "02-alpha",
+      "producer_route": null,
+      "original_bytes": 195491840,
+      "original_sha256": "6ffc6fa294c37a5d4fa5425df585efb66c6c74dae539bd494c3d282ef5012135",
+      "distribution_format": "LEGACY_PREVIEW_NATIVE",
+      "transport_url": "https://github.com/TechEWorks/release/releases/download/workdesk-gui-inputs-v1.0-qa20261109/WorkDesk-GUI-build-inputs-v1.0.tar",
+      "transport_release_tag": "workdesk-gui-inputs-v1.0-qa20261109",
+      "transport_asset_id": 726787056,
+      "audiences": [
+        "stage_users",
+        "stage_testers"
+      ],
+      "distribution_state": "EXISTING_PUBLIC_QA_PREVIEW_OR_INPUT",
+      "rights_review": "NOT_REVERIFIED",
+      "qa_scope": "Candidate-specific evidence only; no product or Stable QA approval",
+      "approved_product_release": false,
+      "notes": "Previously published native GitHub asset; not a new single-ZIP publication under S4."
+    }
+  ]
+}
