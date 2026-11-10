@@ -1,6 +1,6 @@
 # TechE WorkDesk v1.0
 
-**From disk choice to a ready-to-recognize work environment.** WorkDesk combines a guided Debian installation, storage planning, separate daily and maintenance accounts, and a branded business desktop. It is intended for both local and remotely accessed workstations. The available WD(txt) ISO is a **QA preview**, not an approved production release.
+**From disk choice to a ready-to-recognize work environment.** WorkDesk combines a guided Debian installation, storage planning, separate daily and maintenance accounts, and a branded business desktop. It is intended for both local and remotely accessed workstations. Publicly downloadable historical QA previews now include WD(txt) QA23 and QA29 and WD(gui) network QA279; these are **QA previews**, not approved production releases. The GUI offline QA270 remains a retained candidate, not a verified public download.
 
 ![Actual QA23 WorkDesk desktop after installation](previews/qa23/screenshots/01-workdesk-desktop.png)
 
@@ -29,9 +29,9 @@ TechE plans optional AI/LLM tools, client-selectable packs, remote multiuser ope
 
 | Installer edition | Availability | Delivery |
 | --- | --- | --- |
-| **WD(txt) network** | [QA preview 23 available](https://github.com/TechEWorks/release/releases/tag/workdeskv1.0-v1.0.0-qa.23) | Text setup; downloads pinned WorkDesk content and Debian packages. |
-| **WD(gui) network** | Coming soon | Graphical setup with network delivery. |
-| **WD(gui) offline** | Coming soon | Graphical setup with required content on the media. |
+| **WD(txt) network** | [Legacy QA23](https://github.com/TechEWorks/release/releases/tag/workdeskv1.0-v1.0.0-qa.23) and [QA29 build input preview](https://github.com/TechEWorks/release/releases/tag/workdesk-gui-inputs-v1.0-qa20261109) publicly available | Text setup; independent candidate-specific installation QA, not a released product. |
+| **WD(gui) network** | [QA279 legacy public preview](https://github.com/TechEWorks/release/releases/tag/workdesk-gui-inputs-v1.0-qa20261109) | Native Calamares Welcome boot observed; complete installation and route QA remain OPEN. |
+| **WD(gui) offline** | QA270 candidate retained internally; no verified public ISO link | Graphical setup with required content on the media; clean rebuild and full release QA remain OPEN. |
 
 ## Actual QA23 journey
 
