@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "product_id": "servosv1.0",
+  "stage_id": "04",
+  "stage_path": "04-base-release",
+  "status": "AVAILABLE",
+  "publication": "PUBLIC_SUPPORTED",
+  "release_id": "servosv1.0-v1.0.0",
+  "source_commit": "359909def220ac8b152d4015cecd28f959770ddf",
+  "outputs": [
+    {
+      "output_id": "network-iso",
+      "kind": "ISO installer",
+      "filename": "TechE-ServOS-13.7-v1.0-amd64-network.iso",
+      "byte_size": 71696384,
+      "sha256": "b449436c0575a0dd95d61a3a228b0cbe465f415b64dea392352b1da2c04556cf",
+      "download_url": "https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/TechE-ServOS-13.7-v1.0-amd64-network.iso"
+    }
+  ],
+  "manifest": "../1.0.0/RELEASE-MANIFEST.json",
+  "qa": "../1.0.0/QA.md",
+  "qa_state": "PARTIAL",
+  "production_approval": "NOT_APPROVED",
+  "note": "Retrospective S4 catalog pointer; historical release predates S4. Production qualification remains open."
+}

@@ -26,6 +26,18 @@ system installed on it.
 - **Evaluate the release:** read the [full feature path](1.0.0/FEATURES.md)
   and [exact-release QA record](1.0.0/QA.md).
 
+## S4 release map — request, output and proof
+
+| Administrator need | Delivered in public 1.0.0 | Exact evidence and limit |
+| --- | --- | --- |
+| Install a minimal Debian 13.7 base | [Deployable network ISO](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/TechE-ServOS-13.7-v1.0-amd64-network.iso), 71,696,384 bytes, SHA-256 `b449436c0575a0dd95d61a3a228b0cbe465f415b64dea392352b1da2c04556cf` | [Manifest](1.0.0/RELEASE-MANIFEST.json), [checksums](1.0.0/SHA256SUMS.txt), [exact-ISO QA](1.0.0/QA.md) |
+| Choose boot storage and protect the erase target | [Feature contract](1.0.0/FEATURES.md) and [install guide](1.0.0/INSTALL.md) | [Published ISO tests](1.0.0/QA.md) name the layouts, disks, cold boots and recovery actually observed; other cases stay open |
+| Administer the installed base remotely | OpenSSH, sudo and APT after installation | [Exact-ISO SSH, APT, static IPv4 and key-path evidence](1.0.0/QA.md); coverage is limited to recorded VM225 paths |
+| Rebuild and inspect source | [Source ZIP](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/TechE-ServOS-13.7-v1.0-SOURCE.zip), [build guide](1.0.0/BUILD.md) and [legal record](1.0.0/LEGAL.md) | [Byte-identical public rebuild](1.0.0/QA.md#verified-checks); upstream notice inventory and release signature remain open |
+
+The [seven S4 stage catalogs](#s4-stage-catalogs) identify which stage has a public asset. [04-base-release](04-base-release/README.md) points to the existing stable 1.0.0 file and its **own** QA. The private beta.1 ISO has a different SHA-256; no Beta test result is carried into this public release. A future production-qualified candidate must rerun every required case on its own exact ISO. Public 1.0.0 predates S4 adoption and has no retroactive frozen S4 packet.
+
+
 ## One small base, many possible systems
 
 | Build next | Start with ServOS, then add |
@@ -175,3 +187,17 @@ states the other storage, recovery and hardware paths still open.
 to a Debian package mirror. Verify the release checksum before deployment.
 The [version record](1.0.0/README.md) and [release index](index.json) identify
 the artifacts. Contact [sysadmin@teche.works](mailto:sysadmin@teche.works).
+
+## S4 stage catalogs
+
+| Stage | Public catalog status |
+| --- | --- |
+| [00 Explore/POC](00-explore-poc/README.md) | EMPTY — no approved public stage asset recorded |
+| [01 Strawman](01-strawman/README.md) | EMPTY — no approved public stage asset recorded |
+| [02 Alpha](02-alpha/README.md) | EMPTY — no approved public stage asset recorded |
+| [03 Beta](03-beta/README.md) | EMPTY — private beta.1 is historical and not a public download |
+| [04 Base release](04-base-release/README.md) | AVAILABLE — public 1.0.0 ISO, source and release records |
+| [05 Install/deploy](05-install-deploy/README.md) | EMPTY — no separate approved stage deliverable recorded |
+| [06 Support](06-support/README.md) | EMPTY — no separate approved stage deliverable recorded |
+
+These catalog entries describe publication only. They do not create source-stage records, transfer QA between ISO hashes, or certify untested production environments.

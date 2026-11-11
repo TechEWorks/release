@@ -72,6 +72,10 @@ administrator shell and noninteractive SSH remain available for other roles.
 
 ![Published ISO first-boot system display, also shown on interactive SSH](screenshots/04-published-iso-first-boot-console.png)
 
+## S4 retrospective mapping
+
+This public 1.0.0 ISO is a distinct build from the private beta.1 ISO. Its own source commit, byte count, SHA-256, rebuild and installed-system QA are recorded above and in [QA.md](QA.md). The [04-base-release stage catalog](../04-base-release/README.md) points to this actual release. The release predates S4 adoption; no frozen S4 §21 packet is claimed for 2026.11.05. A new production-qualified release must rerun all required tests on its exact output, resolve its own open controls and freeze its own rules packet.
+
 ## Guides and release record
 
 1. [Install and first boot](INSTALL.md)
