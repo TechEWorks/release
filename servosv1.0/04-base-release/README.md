@@ -27,3 +27,5 @@ test "$(stat -c %s TechE-ServOS-13.7-v1.0-amd64-network.iso)" -eq 71696384
 ```
 
 Use the [install guide](../1.0.0/INSTALL.md) and [exact-ISO QA scope](../1.0.0/QA.md). The base ISO is a build input only. The existing 1.0.0 release used direct assets before S4; `LEGACY_PREVIEW` in [index.json](index.json) describes that transport history, not the stable release maturity. No one-file transport ZIP, signing proof or S4 frozen packet is claimed for 2026.11.05. New releases must meet the current S4 transfer and trust rules.
+
+The [version record](../1.0.0/README.md#publication-record-reconciliation) explains why the publication-time manifest QA sentence differs from the later same-ISO QA report, and why the repository and release-asset checksum text have different line endings. Use the release asset for exact published bytes.
