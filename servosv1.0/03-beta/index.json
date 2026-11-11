@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "product_id": "servosv1.0",
+  "stage_id": "03",
+  "stage_path": "03-beta",
+  "status": "EMPTY",
+  "publication": "NOT_PUBLISHED",
+  "outputs": [],
+  "reason": "Historical beta.1 remains private; no public Beta artifact is offered here.",
+  "public_release_reference": "../04-base-release/README.md"
+}
