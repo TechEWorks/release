@@ -1,11 +1,15 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "product_id": "servosv1.0",
   "stage_id": "03",
   "stage_path": "03-beta",
   "status": "EMPTY",
   "publication": "NOT_PUBLISHED",
-  "outputs": [],
   "reason": "Historical beta.1 remains private; no public Beta artifact is offered here.",
-  "public_release_reference": "../04-base-release/README.md"
+  "public_release_reference": "../04-base-release/README.md",
+  "product_version": "1.0.0",
+  "allowed_audiences": [],
+  "assets": [],
+  "withdrawn": false,
+  "superseded_by": null
 }
