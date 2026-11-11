@@ -72,6 +72,12 @@ administrator shell and noninteractive SSH remain available for other roles.
 
 ![Published ISO first-boot system display, also shown on interactive SSH](screenshots/04-published-iso-first-boot-console.png)
 
+## Publication-record reconciliation
+
+The release asset `RELEASE-MANIFEST.json` was published before the later exact-ISO live tests; its `qa` sentence describes the state at initial publication. The [current published QA report](QA.md) records the additional tests on the same public ISO SHA-256 and the checks still open. The manifest asset and ISO are unchanged.
+
+The repository copy of `SHA256SUMS.txt` uses LF line endings (393 bytes). The downloadable release asset has the same four checksum entries with CRLF line endings (397 bytes; SHA-256 `f454454c22d9389abe1433e6532ac2eb74f3e7b21de9ba21fc19325055ff65d8`). Use the [release asset](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/SHA256SUMS.txt) when verifying the exact published file. Neither checksum form is a signature.
+
 ## S4 retrospective mapping
 
 This public 1.0.0 ISO is a distinct build from the private beta.1 ISO. Its own source commit, byte count, SHA-256, rebuild and installed-system QA are recorded above and in [QA.md](QA.md). The [04-base-release stage catalog](../04-base-release/README.md) points to this actual release. The release predates S4 adoption; no frozen S4 §21 packet is claimed for 2026.11.05. A new production-qualified release must rerun all required tests on its exact output, resolve its own open controls and freeze its own rules packet.
