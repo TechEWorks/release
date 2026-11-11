@@ -13,3 +13,17 @@
 | Rights | [Legal notices](../1.0.0/LEGAL.md) |
 
 The public ISO's exact-ISO QA includes VM225 installs, cold boots, SSH/APT and selected storage/recovery paths; [QA.md](../1.0.0/QA.md) names each result and remaining hardware, recovery, SBOM/notice and signature gaps. The private beta.1 hash is different; its results are never inherited. A future production-qualified candidate starts NOT_RUN for every required case and must retest its exact bytes.
+
+## Retrieve and verify the deployable ISO
+
+On a Debian/Linux machine, download the exact public release assets and check the published checksum and original byte count before deployment:
+
+```sh
+base='https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0'
+curl -fL -o TechE-ServOS-13.7-v1.0-amd64-network.iso "$base/TechE-ServOS-13.7-v1.0-amd64-network.iso"
+curl -fL -o SHA256SUMS.txt "$base/SHA256SUMS.txt"
+sha256sum -c SHA256SUMS.txt --ignore-missing
+test "$(stat -c %s TechE-ServOS-13.7-v1.0-amd64-network.iso)" -eq 71696384
+```
+
+Use the [install guide](../1.0.0/INSTALL.md) and [exact-ISO QA scope](../1.0.0/QA.md). The base ISO is a build input only. The existing 1.0.0 release used direct assets before S4; `LEGACY_PREVIEW` in [index.json](index.json) describes that transport history, not the stable release maturity. No one-file transport ZIP, signing proof or S4 frozen packet is claimed for 2026.11.05. New releases must meet the current S4 transfer and trust rules.
