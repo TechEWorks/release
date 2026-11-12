@@ -1,0 +1,5 @@
+Data, RAID1: total=3.00GiB, used=256.64MiB
+System, RAID1: total=8.00MiB, used=16.00KiB
+Metadata, RAID1: total=512.00MiB, used=12.92MiB
+GlobalReserve, single: total=5.50MiB, used=0.00B
+REMOTE_EXIT=0

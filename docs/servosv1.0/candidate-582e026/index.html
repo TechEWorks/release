@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>ServOS candidate 582e026 | QA preview | TechE Works</title>
+  <style>
+    :root{color-scheme:light;--ink:#172334;--muted:#536477;--line:#dce4ed;--blue:#065aa2;--pale:#f5f8fc;--amber:#815300;--amberbg:#fff3d6;--red:#922b25;--redbg:#fff0ef}
+    *{box-sizing:border-box}body{margin:0;font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:#fff}main{max-width:1120px;margin:auto;padding:2.5rem 1.25rem 5rem}
+    .eyebrow{font-size:.8rem;font-weight:750;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}h1{font-size:clamp(2rem,4vw,3.4rem);line-height:1.1;margin:.6rem 0 1rem;letter-spacing:-.035em}h2{font-size:1.5rem;margin:2.6rem 0 .8rem}p{max-width:78ch}.lead{font-size:1.15rem;color:#314359}.bar{background:var(--amberbg);border-left:4px solid #d29000;padding:1rem 1.25rem;border-radius:.3rem;margin:1.6rem 0}.bar strong{color:var(--amber)}.fail{background:var(--redbg);border-left:4px solid var(--red);padding:1rem 1.25rem;border-radius:.3rem;margin:1rem 0}.fail strong{color:var(--red)}
+    .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;margin:1.8rem 0}.fact{background:var(--pale);border:1px solid var(--line);padding:1rem;border-radius:.5rem}.fact b{display:block;font-size:1.4rem}.fact span{font-size:.85rem;color:var(--muted)}code{overflow-wrap:anywhere;background:#f0f3f7;padding:.1rem .25rem;border-radius:.2rem}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem}.card{border:1px solid var(--line);border-radius:.6rem;overflow:hidden;background:#fff}.card img{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#050708}.card div{padding:1rem}.card h3{margin:0 0 .35rem;font-size:1.05rem}.card p{margin:0;color:var(--muted);font-size:.9rem}.links{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;margin:1.5rem 0}a{color:var(--blue);text-decoration-thickness:1px;text-underline-offset:3px}.foot{border-top:1px solid var(--line);padding-top:1.2rem;margin-top:3rem;color:var(--muted);font-size:.88rem}@media(max-width:740px){.facts,.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body><main>
+  <div class="eyebrow">TechE Works / ServOS / Candidate QA preview</div>
+  <h1>Text-guided Debian install: observed screens</h1>
+  <p class="lead">A short visual record from disposable QEMU tests of one exact ServOS ISO. It shows disk review, typed erase, completed installation and first boot on three tested storage paths.</p>
+  <div class="bar"><strong>Candidate, not a production release.</strong> No public download of this ISO is approved. The full release QA, rights review, independent review and Business receiving decision remain open.</div>
+  <div class="facts"><div class="fact"><b>6 PASS</b><span>of 19 rapid gates</span></div><div class="fact"><b>11 PARTIAL</b><span>more testing required</span></div><div class="fact"><b>1 FAIL</b><span>public scripts fetch, D09</span></div></div>
+  <p><strong>Exact tested ISO:</strong> <code>TechE-ServOS-13.7-v1.0-CANDIDATE-20261112-582e026.iso</code><br><strong>Size:</strong> 71,696,384 bytes<br><strong>SHA-256:</strong> <code>9269b7641117b963986a4c6f5e157a41486fc84c5283fe8cf4fc96180617c097</code><br><strong>Source commit:</strong> <code>582e026be9f28fed90a9d4c2dccfc4ea164b05a8</code></p>
+  <div class="fail"><strong>D09 failed on the installed ISO.</strong> <code>sudo /usr/bin/teche get scriptsv1.0</code> returned exit 65 because the public scripts folder was absent. A clean four-file package is under review; no installed public-main retest has passed.</div>
+  <h2>Eight screens from the exact ISO</h2>
+  <div class="grid">
+    <article class="card"><a href="images/servos-s4-qa582276-20261112-15.png"><img loading="lazy" alt="Ext4 installation review with selected disk and settings" src="images/servos-s4-qa582276-20261112-15.png"></a><div><h3>1. Review before writing</h3><p>VM276, one-disk ext4. Disk identity, partitions and chosen settings are visible.</p></div></article>
+    <article class="card"><a href="images/servos-s4-qa582276-20261112-16.png"><img loading="lazy" alt="Typed ERASE confirmation gate" src="images/servos-s4-qa582276-20261112-16.png"></a><div><h3>2. Typed erase gate</h3><p>The installer requires the operator to type ERASE after the final review.</p></div></article>
+    <article class="card"><a href="images/servos-s4-qa582276-20261112-19.png"><img loading="lazy" alt="All six installation tasks completed" src="images/servos-s4-qa582276-20261112-19.png"></a><div><h3>3. Six tasks complete</h3><p>VM276 completed installation and verification on the selected test disk.</p></div></article>
+    <article class="card"><a href="images/servos-s4-qa582276-20261112-21.png"><img loading="lazy" alt="Installed Debian server after ext4 cold boot" src="images/servos-s4-qa582276-20261112-21.png"></a><div><h3>4. Ext4 cold boot</h3><p>VM276 booted from its installed disk after the ISO was detached.</p></div></article>
+    <article class="card"><a href="images/servos-s4-qa582279-20261112-28.png"><img loading="lazy" alt="Btrfs RAID1 installation completion screen" src="images/servos-s4-qa582279-20261112-28.png"></a><div><h3>5. Three-disk Btrfs RAID1</h3><p>VM279 completed a three-disk install with separate directory subvolumes.</p></div></article>
+    <article class="card"><a href="images/servos-s4-qa582279-20261112-29.png"><img loading="lazy" alt="Installed Debian server after Btrfs RAID1 cold boot" src="images/servos-s4-qa582279-20261112-29.png"></a><div><h3>6. Btrfs cold boot</h3><p>VM279 booted from disk with the ISO detached; RAID1 profile and mounts were also checked by command.</p></div></article>
+    <article class="card"><a href="images/servos-s4-qa582280-20261112-15.png"><img loading="lazy" alt="XFS single-disk installation completion screen" src="images/servos-s4-qa582280-20261112-15.png"></a><div><h3>7. Single-disk XFS</h3><p>VM280 completed the XFS install on a disposable 8 GiB disk.</p></div></article>
+    <article class="card"><a href="images/servos-s4-qa582280-20261112-16.png"><img loading="lazy" alt="Installed Debian server after XFS cold boot" src="images/servos-s4-qa582280-20261112-16.png"></a><div><h3>8. XFS cold boot</h3><p>VM280 booted from disk without the ISO; SSH <code>findmnt</code> confirmed <code>xfs /dev/sda3</code>.</p></div></article>
+  </div>
+  <h2>Read the evidence</h2><div class="links">
+    <a href="https://github.com/TechEWorks/release/blob/main/docs/servosv1.0/candidate-582e026/evidence/01%20Rapid%2019-gate%20smoke.md">Full 19-gate candidate report</a>
+    <a href="https://github.com/TechEWorks/release/blob/main/docs/servosv1.0/candidate-582e026/evidence/02%20D09%20public%20fetch%20diagnosis.md">D09 failure and retest path</a>
+    <a href="https://github.com/TechEWorks/release/blob/main/docs/servosv1.0/candidate-582e026/evidence/03%20Btrfs%20RAID1%20installed%20retest.md">Btrfs case</a>
+    <a href="https://github.com/TechEWorks/release/blob/main/docs/servosv1.0/candidate-582e026/evidence/04%20XFS%20single-disk%20installed%20retest.md">XFS case</a>
+  </div>
+  <p class="foot">These screenshots document specific QEMU observations. They do not establish production readiness, physical-hardware coverage, failed-member recovery, or a public ISO download. The historical public ServOS 1.0.0 is a different artifact with separate QA.</p>
+</main></body></html>

@@ -1,0 +1,6 @@
+Label: 'DRIVEOS_ROOT'  uuid: e91ac78d-d353-47b4-8b17-2743abed7cc6
+	Total devices 3 FS bytes used 269.58MiB
+	devid    1 size 6.50GiB used 2.25GiB path /dev/sda3
+	devid    2 size 6.50GiB used 2.26GiB path /dev/sdb3
+	devid    3 size 6.50GiB used 2.51GiB path /dev/sdc3
+REMOTE_EXIT=0
