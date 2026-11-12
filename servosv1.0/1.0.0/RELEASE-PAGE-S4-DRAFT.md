@@ -21,7 +21,7 @@ The [feature contract](https://github.com/TechEWorks/release/blob/main/servosv1.
 
 ## Download, deploy and check
 
-Use an x86-64 UEFI machine or VM with Secure Boot off, a wired network reaching a Debian mirror, and an expendable target disk. Follow the [install and first-boot procedure](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/INSTALL.md); the installer erases only the disk IDs you confirm. The ISO is a **network installer**: it does not include target Debian packages, WorkDesk, NetBird, VPN credentials or a finished desktop.
+Use an x86-64 UEFI machine or VM with Secure Boot off, a wired network reaching a Debian mirror, and an expendable target disk. Follow the [install and first-boot procedure](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/INSTALL.md); inspect the selected disk IDs and typed erase confirmation carefully. The ISO is a **network installer**: it does not include target Debian packages, WorkDesk, NetBird, VPN credentials or a finished desktop.
 
 After downloading, compare the file size and SHA-256 above or use the [checksum asset](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/SHA256SUMS.txt). On Linux, a direct check of the deployable ISO is:
 
