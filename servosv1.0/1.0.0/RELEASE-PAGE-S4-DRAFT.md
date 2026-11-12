@@ -37,4 +37,10 @@ After installation, detach the ISO, cold-boot the target and check the console, 
 
 **Limits still open:** representative RAIDZ and other storage layouts, broader static/key environments and hardware, interrupted install and additional degraded-member recovery, complete installed/ISO SBOM and upstream notice audit, release signature, and a published pinned WorkDesk package. See the [exact-ISO QA report](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/QA.md#L144), [legal information](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/LEGAL.md) and Business receiving decision (still open; not publicly published). The private beta.1 and next S4 candidate have different hashes and cannot inherit this release's test results. No release signature or production-wide approval is claimed.
 
+## Historical record and scope details
+
+The public source tree is `f805c77e945ec6ad0331edda074f3dd08b4b3c9e`; the [S4 stage 04 catalog](https://github.com/TechEWorks/release/blob/main/servosv1.0/04-base-release/README.md) points to the release records. The downloadable checksum asset has CRLF line endings while the repository text copy uses LF with the same entries. The release manifest describes QA at publication time; later [QA additions](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/QA.md) were run on the same public ISO hash. This historical release has no backdated frozen S4 packet.
+
+The installer starts on a local or remote-management console. After first boot, an administrator can configure the server over reachable SSH. The ISO contains no VPN account, key or service. The old private beta.1 ISO has SHA-256 `1866bd0fbc19be6461ef73227e605c93bb1d7e7edaa05e96ff78e99c5463c342`; its QA is separate. The [public product catalog and screenshots](https://github.com/TechEWorks/release/tree/main/servosv1.0) remain available.
+
 Support or security reports: [sysadmin@teche.works](mailto:sysadmin@teche.works). Include the ISO hash, storage layout and installer log without credentials or customer data.
