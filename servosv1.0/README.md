@@ -1,5 +1,12 @@
 # TechE ServOS (13.7) v1.0
 
+**Release identity:** The download links below belong to historical public
+`servosv1.0-v1.0.0` only. A new S4 scripts-only candidate has a
+[public QA screen preview](https://techeworks.github.io/release/servosv1.0/candidate-582e026/)
+with its exact ISO hash and test limits. That candidate is **not approved for
+production download**; its public ISO, scripts fetch, full QA and release
+decision remain pending. The historical ISO and its QA do not transfer to it.
+
 **A minimal Debian foundation for remotely provisioning the next system.**
 
 Built on **Debian GNU/Linux 13.7**, ServOS turns a blank physical server or VM

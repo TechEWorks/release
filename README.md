@@ -14,7 +14,7 @@ licenses.
 | Product | Public release index |
 | --- | --- |
 | WorkDesk 1.0 | [Product and download guide](workdeskv1.0/README.md) · [approved release index](workdeskv1.0/index.json) |
-| ServOS 1.0 | [Product and download guide](servosv1.0/README.md) · [version index](servosv1.0/index.json) |
+| ServOS 1.0 | [Product and historical 1.0.0 download guide](servosv1.0/README.md) · [version index](servosv1.0/index.json) · [new S4 candidate QA preview](https://techeworks.github.io/release/servosv1.0/candidate-582e026/) (not a release download) |
 | Fleet RMM 1.0 | [fleetrmmv1.0/index.json](fleetrmmv1.0/index.json) |
 | UCP 1.0 | [ucpv1.0/index.json](ucpv1.0/index.json) |
 | Maestro 1.0 | [maestrov1.0/index.json](maestrov1.0/index.json) |
