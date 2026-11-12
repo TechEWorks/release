@@ -1,42 +1,40 @@
-**A minimal Debian server on the storage layout you choose.** TechE ServOS installs Debian 13.7 on a selected DriveOS disk or disk set, then boots with networking, OpenSSH, sudo and APT. The installed server runs independently of Proxmox.
+# TechE ServOS 1.0.0 — public network installer
 
-## S4 release identity and exact evidence
+**A text-guided installer for a minimal Debian 13.7 server.** It is intended for an administrator evaluating disk layout, network setup and a first boot with SSH, sudo and APT. The buyer, commercial value proposition and supported production scope have **not** been approved by the Business owner. This is the historical public 1.0.0 release; it predates the S4 release packet and is not a new production qualification.
 
-**Public deployable output:** [TechE-ServOS-13.7-v1.0-amd64-network.iso](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/TechE-ServOS-13.7-v1.0-amd64-network.iso), 71,696,384 bytes, SHA-256 `b449436c0575a0dd95d61a3a228b0cbe465f415b64dea392352b1da2c04556cf`. This is a separate build from the private beta.1 ISO (`1866bd0fbc19be6461ef73227e605c93bb1d7e7edaa05e96ff78e99c5463c342`); **no Beta test result is transferred**. The public release source commit is `359909def220ac8b152d4015cecd28f959770ddf`, with tree `f805c77e945ec6ad0331edda074f3dd08b4b3c9e`.
+**[Download the deployable ISO](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/TechE-ServOS-13.7-v1.0-amd64-network.iso)** · 71,696,384 bytes · SHA-256 `b449436c0575a0dd95d61a3a228b0cbe465f415b64dea392352b1da2c04556cf` · [checksums](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/SHA256SUMS.txt) · [manifest](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/RELEASE-MANIFEST.json)
 
-The [S4 stage 04 catalog](https://github.com/TechEWorks/release/blob/24ea465b992bac76ee11b57c5f953436b377de0c/servosv1.0/04-base-release/README.md) maps this output to its [manifest](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/RELEASE-MANIFEST.json), [source and build guide](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/BUILD.md), [install guide](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/INSTALL.md), [feature contract](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/FEATURES.md), [exact-public-ISO QA and open checks](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/QA.md), and [rights notices](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/LEGAL.md). Those public tests were run on the public hash above. A future production-qualified candidate must rerun every required case on its own bytes and resolve its own open hardware, recovery, SBOM/notice and signature gates. This historical 1.0.0 release predates S4; no backdated frozen S4 packet is claimed. The release manifest's QA sentence reflects publication time; the later [QA report](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/QA.md) records additional tests on the same ISO hash. The downloadable checksum asset uses CRLF line endings; the repository text copy uses LF with identical entries.
+**Start:** [prerequisites and install](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/INSTALL.md) · [feature and SSH guide](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/FEATURES.md) · [full QA and limits](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/QA.md) · [source and rebuild](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/BUILD.md)
 
+## What the exact public ISO demonstrated
 
-## Why ServOS exists
+These are **tested paths on this ISO hash**, not blanket claims for every supported-looking menu choice:
 
-An administrator may need the OS to boot from ZFS, multi-disk Btrfs or an mdadm array with ext4 or XFS. Debian Installer supports mdadm and an optional SSH network console, but it does not present all these boot layouts together in one compact, guided storage workflow. ServOS lets you inspect disks, choose an eligible layout, review the exact erase target and watch the installation in one text interface.
+| Observed outcome | Direct QA evidence |
+| --- | --- |
+| A selected single disk installed and cold-booted Debian with SSH, sudo and APT on ext4, XFS and ZFS paths. | [ext4](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/QA.md#L26), [XFS](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/QA.md#L42), [ZFS](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/QA.md#L54) |
+| Two-disk ZFS mirror and mdadm RAID1/XFS installed and cold-booted from either EFI member while both storage members were present. | [ZFS mirror](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/QA.md#L69), [mdadm RAID1](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/QA.md#L83) |
+| One Btrfs RAID1 path installed with static IPv4, SSH key access and separate subvolumes; it booted from either EFI member with both present. | [Btrfs, network and SSH test](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/QA.md#L95) |
+| The same Btrfs test guest booted with a member missing and was repaired manually after the member returned. | [Degraded boot and repair record](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/QA.md#L114) |
 
-The ISO starts on a local or remote-management **console**. After first boot, use SSH to configure the next role from a reachable network. NetBird or another VPN client can be installed later for private remote access; the ISO bundles no VPN account, key or service. This makes ServOS a small foundation for WorkDesk, infrastructure roles or a custom server.
+The [feature contract](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/FEATURES.md) describes the installer; the [QA report](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/QA.md) determines which paths were actually tested. A newer private S4 Business draft maps 80 source-derived feature IDs, but it has no approved customer claims or receiving decision. This public historical page therefore states only exact-ISO tested behavior.
 
-## Start here
+## Download, deploy and check
 
-- [Download the network installer ISO](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/TechE-ServOS-13.7-v1.0-amd64-network.iso)
-- [Install and first boot](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/INSTALL.md)
-- [Features and remote SSH setup](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/FEATURES.md)
-- [Build the ISO from public source](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/BUILD.md)
-- [QA results and open checks](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/QA.md)
-- [License and upstream notices](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/LEGAL.md)
-- [ServOS product page and installer screenshots](https://github.com/TechEWorks/release/tree/main/servosv1.0)
+Use an x86-64 UEFI machine or VM with Secure Boot off, a wired network reaching a Debian mirror, and an expendable target disk. Follow the [install and first-boot procedure](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/INSTALL.md); the installer erases only the disk IDs you confirm. The ISO is a **network installer**: it does not include target Debian packages, WorkDesk, NetBird, VPN credentials or a finished desktop.
 
-## Release files
+After downloading, compare the file size and SHA-256 above or use the [checksum asset](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/SHA256SUMS.txt). On Linux, a direct check of the deployable ISO is:
 
-- **[Installer ISO](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/TechE-ServOS-13.7-v1.0-amd64-network.iso)** — deployable, 71,696,384 bytes. SHA-256: `b449436c0575a0dd95d61a3a228b0cbe465f415b64dea392352b1da2c04556cf`.
-- **[Source ZIP](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/TechE-ServOS-13.7-v1.0-SOURCE.zip)** — buildable source, tests, guide and dated license, 115,286 bytes. SHA-256: `f63ce9c9dde59ff4e8f5b9260a589f32bfaec224de72f66ee0900001cd526013`.
-- **[Pinned base ISO](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/BUILD-INPUT-Pinned-Base-ISO.iso)** — required for an independent rebuild, 63,307,776 bytes. **Do not deploy this input ISO.**
+```sh
+printf '%s  %s\n' 'b449436c0575a0dd95d61a3a228b0cbe465f415b64dea392352b1da2c04556cf' 'TechE-ServOS-13.7-v1.0-amd64-network.iso' | sha256sum -c -
+```
 
-The release also includes [SHA256SUMS.txt](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/SHA256SUMS.txt) and [RELEASE-MANIFEST.json](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/RELEASE-MANIFEST.json). Verify downloaded assets before use. No release signature is claimed.
+After installation, detach the ISO, cold-boot the target and check the console, SSH access and APT as described in the guide. Use a disposable VM for evaluation.
 
-## Tested scope
+## Source, build and review
 
-On 5 November 2026, the **exact published ISO** completed live installations on disposable UEFI VM225: single-disk ext4, XFS and ZFS, two-disk ZFS mirror, two-disk mdadm RAID1/XFS, and two-disk Btrfs RAID1. Each two-disk layout cold-booted from both EFI members with both members present. The Btrfs run also checked static IPv4, SSH public-key access and separate `/tmp`, `/var` and `/home` subvolumes; one degraded Btrfs boot and manual recovery path was tested. SSH, sudo and APT update passed on the tested paths. The [QA record](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/QA.md) states exact evidence and the storage, network, recovery and hardware paths still open. A reachable Debian package mirror is required during installation.
+[Download the public source ZIP](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/TechE-ServOS-13.7-v1.0-SOURCE.zip) (115,286 bytes; SHA-256 `f63ce9c9dde59ff4e8f5b9260a589f32bfaec224de72f66ee0900001cd526013`) and the [pinned base ISO](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/BUILD-INPUT-Pinned-Base-ISO.iso) (63,307,776 bytes; SHA-256 `7a473b485c3a81406098e2806a6a489b88eb10e44da188db86b92e7a37dfa55a`). **The pinned base is build-only; do not deploy it as ServOS.** The [human build procedure](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/BUILD.md) gives exact commands; an AI operator must use those same pins and checks, stop on any mismatch and record its own build identity. An [independent public-source rebuild](https://github.com/TechEWorks/release/actions/runs/41983978934) produced the published ISO hash. The published source commit is `359909def220ac8b152d4015cecd28f959770ddf`.
 
-## Rebuild and support
+**Limits still open:** representative RAIDZ and other storage layouts, broader static/key environments and hardware, interrupted install and additional degraded-member recovery, complete installed/ISO SBOM and upstream notice audit, release signature, and a published pinned WorkDesk package. See the [exact-ISO QA report](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/QA.md#L144), [legal information](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/LEGAL.md) and Business receiving decision (still open; not publicly published). The private beta.1 and next S4 candidate have different hashes and cannot inherit this release's test results. No release signature or production-wide approval is claimed.
 
-An [independent public rebuild](https://github.com/TechEWorks/release/actions/runs/41983978934) verified the release ZIP and pinned base ISO, ran the screen checks, and produced a byte-identical ISO. Follow the [build guide](https://github.com/TechEWorks/release/blob/main/servosv1.0/1.0.0/BUILD.md), including its source-ZIP line-ending step. The optional WorkDesk catalog awaits a published, pinned WorkDesk asset.
-
-Contact [sysadmin@teche.works](mailto:sysadmin@teche.works) · [TechEWorks on GitHub](https://github.com/TechEWorks)
+Support or security reports: [sysadmin@teche.works](mailto:sysadmin@teche.works). Include the ISO hash, storage layout and installer log without credentials or customer data.
