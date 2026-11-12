@@ -1,0 +1,10 @@
+# ServOS f2c20f2 — QA gallery draft
+
+**Publication state: branch draft. No public release or production QA PASS.** The [gallery](index.html) separates screenshots from exact current ISO SHA-256 `2792e3044b94f94b263dc48a11c7e7fe3154d3e415050d5366683a190925260b` from earlier ISO SHA-256 `9269b7641117b963986a4c6f5e157a41486fc84c5283fe8cf4fc96180617c097`. The immutable [VM281 case report](https://github.com/TechEWorks/servosv1.0/blob/8fe70735ca0d015a8479412157921d3056f402a3/03-beta/qa/results/s4-candidate-f2c20f2-vm281/01%20Rapid%20ext4%20install%20and%20cold%20boot.md) records what passed and D09's public fetch failure.
+
+| Group | Source capture | What the page may claim |
+| --- | --- | --- |
+| Current candidate | Disposable QEMU VM281 console, `servos-s4-qaf2c281-20261112-00/04/05/08/10/16/17/19/21/22/23.png` copied unchanged from the QA capture directory; [file hashes](SHA256SUMS.txt) | One-disk ext4 installer steps completed in 4:21; after shutdown, ISO detachment and disk-first boot, the installed Debian console appeared. QA-only SSH and root filesystem checks passed. Public scripts fetch D09 **FAILED** exit 65. This is partial candidate smoke, not full release QA. |
+| Earlier candidate | Existing [582e026 gallery and evidence](../candidate-582e026/) from disposable VMs 276, 279 and 280 | Ext4/XFS/Btrfs installed examples, ZFS/mdadm menu examples and visible installation progress only for the **earlier** ISO. Its results do not qualify f2c20f2. |
+
+The current VM281 ext4 4:21 is a six-task elapsed observation on the exact f2c20f2 ISO; it is not a general performance promise or full release QA. The prior candidate's XFS 3:04 and three-disk Btrfs RAID1 4:22 are the six-task elapsed times recorded by their respective [XFS](../candidate-582e026/evidence/04%20XFS%20single-disk%20installed%20retest.md) and [Btrfs](../candidate-582e026/evidence/03%20Btrfs%20RAID1%20installed%20retest.md) QEMU cases. They are fixture observations, not performance promises. Update this page only when the exact f2c20f2 case, new screenshot hashes and QA decision are recorded.
