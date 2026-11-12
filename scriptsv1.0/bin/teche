@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# ServOS scripts dispatcher loaded by the /usr/bin/teche bootstrap.
+set -Eeuo pipefail
+scripts_base=/teche.scripts/v1.0
+version_file=$(dirname -- "$(dirname -- "$(readlink -f -- "$0")")")/VERSION
+[[ -r $version_file ]] || { echo 'TechE scripts VERSION is missing.' >&2; exit 65; }
+version=$(cat "$version_file")
+
+usage() {
+  cat <<EOF
+TechE platform v1.0 | scripts $version
+  teche help | --help | -help  Show these commands.
+  teche ver | --version       Show OS and scripts versions.
+  teche get scriptsv1.0       Fetch, verify and activate public scripts.
+  teche update scriptsv1.0    Refresh the same scripts.
+  teche get scripts           Alias for get scriptsv1.0.
+  teche update scripts        Alias for update scriptsv1.0.
+EOF
+}
+
+if (( $# == 0 )) || [[ $# == 1 && ( $1 == help || $1 == --help || $1 == -help || $1 == -h ) ]]; then
+  usage
+  exit 0
+fi
+if (( $# == 1 )) && [[ $1 == ver || $1 == version || $1 == v || $1 == -v || $1 == --version ]]; then
+  printf 'TechE platform: v1.0\n'
+  if [[ -r /etc/os-release ]]; then . /etc/os-release; fi
+  case ${ID:-} in
+    teche-servos) echo 'Current OS: TechE ServOS v1.0' ;;
+    *) printf 'Current OS: %s\n' "${PRETTY_NAME:-unknown}" ;;
+  esac
+  printf 'teche scripts version: %s\n' "$version"
+  if [[ -r $scripts_base/source-commit ]]; then
+    printf 'TechE scripts source commit: %s\n' "$(cat "$scripts_base/source-commit")"
+  else
+    echo 'TechE scripts source commit: not recorded on this machine'
+  fi
+  printf 'Debian base: %s\n' "$(cat /etc/debian_version 2>/dev/null || printf 'not installed')"
+  exit 0
+fi
+usage >&2
+exit 2
