@@ -1,0 +1,64 @@
+Last login: Thu Nov 12 11:41:10 2026 from 10.64.2.10
+
+
+  TechE ServOS (13.7) v1.0
+  MINIMAL SERVER VERSION
+  ------------------------------------------------------------------------
+
+  SYSTEM
+    Host           servos
+    Base           Debian GNU/Linux 13.7
+    Kernel         6.12.116+deb13-amd64
+    TechE          /techev1.0/servosv1.0/
+    Utility        /usr/bin/teche
+    Scripts        /teche.scripts/v1.0/
+    CPU            Common KVM processor | 1 socket | 2 logical cores
+    Time           2026-11-12 11:41 UTC
+
+  NETWORK
+    Interface      servnet0
+    IPv4           10.64.2.74
+    SSH            ssh servadmin@10.64.2.74
+    Access         SSH or console password
+
+  CAPACITY
+    Memory         343 MiB used / 3855 MiB total (9%)
+    DriveOS        700M used / 5.3G free / 6.4G total (12%)
+
+  STORAGE
+    Root           ext4 | /dev/sda3
+    Boot           ext4 | /dev/sda2
+    EFI            vfat | /dev/sda1
+
+    BOOT DRIVE(S)
+    /dev/sda       8G | BOOT + DriveOS | vfat FAT32, ext4 1.0
+
+  GPU
+    GPU 1          Display controller
+    Vendor         QEMU | PCI 1234:1111 | 0000:00:01.0
+    Driver         bochs-drm
+
+  COMMANDS
+    Update         sudo apt update && sudo apt upgrade
+    Install        sudo apt update && sudo apt install <package>
+  ------------------------------------------------------------------------
+
+
+Press Enter to open setup, type shell for a shell, or exit to disconnect:
+4
+
+
+[H[2JTechE ServOS (13.7) v1.0
+MINIMAL SERVER VERSION
+------------------------------------------------------------------------
+
+Remote setup
+
+  1  Open administrator shell
+  2  Get or update TechE scripts
+  3  Show system and network details
+  4  Disconnect
+
+------------------------------------------------------------------------
+Connection to 10.64.2.74 closed.
+Choose 1-4:
