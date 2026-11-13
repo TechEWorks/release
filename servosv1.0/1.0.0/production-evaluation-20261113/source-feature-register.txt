@@ -1,0 +1,127 @@
+TechE ServOS (13.7) v1.0 — numbered feature and QA register
+Register version: 1.0 | 5 November 2026
+
+Use each ID in the repository QA plan with artifact SHA256, VM or host, commands, expected
+result, observed result, PASS/FAIL/UNTESTED and evidence path. A simulated
+PASS never substitutes for a live install and cold boot. Later TechE layers
+append their own numbered group without renumbering these ServOS IDs.
+
+F01  BOOT MEDIA AND PLATFORM
+  F01.01  ISO hash, boot-menu default and UEFI startup.
+  F01.02  x86-64, wired controller and target disk detection.
+  F01.03  Secure Boot limitation and unsupported-platform explanation.
+  F01.04  Installer bootstrap mirror verification and retry/failure display.
+
+F02  NETWORK
+  F02.01  DHCP default, gateway, DNS and package mirror connectivity.
+  F02.02  Static IPv4, subnet, gateway and DNS entry and validation.
+  F02.03  No DHCP, no route, bad DNS and mirror outage recovery.
+  F02.04  Installed network survives cold boot; SSH and APT work.
+
+F03  DISK DISCOVERY AND DATA SAFETY
+  F03.01  Enumerate up to 64 disks; show media, size and stable ID.
+  F03.02  Show model, serial, controller address and existing partitions.
+  F03.03  Protect active boot disks; permit review without selection.
+  F03.04  Extra selection for occupied disks; review identities again.
+  F03.05  Type ERASE exactly; reject changed, missing or mounted disks.
+  F03.06  Preserve every unselected disk and partition.
+
+F04  SINGLE-DISK DRIVEOS
+  F04.01  ext4 format, install, cold boot, SSH, APT and shutdown.
+  F04.02  XFS format, install, cold boot, SSH and APT.
+  F04.03  Btrfs single, subvolumes and compression cold boot.
+  F04.04  ZFS single, boot/root pools and compression cold boot.
+
+F05  MULTI-DISK ZFS
+  F05.01  Mirror, healthy boot and boot from each survivor.
+  F05.02  Stripe capacity and explicit zero-failure warning.
+  F05.03  RAIDZ1 with three or more disks; capacity and degraded boot.
+  F05.04  RAIDZ2 with four or more; two-member loss tolerance.
+  F05.05  RAIDZ3 with five or more; three-member loss tolerance.
+  F05.06  Even-count mirror pairs, pair-aware failure warning and boot.
+  F05.07  Compression choice, ZFS boot-pool compatibility and EFI copies.
+
+F06  MDADM RAID WITH A ROOT FILESYSTEM
+  F06.01  RAID1/ext4 and RAID1/XFS, healthy and one-member boot.
+  F06.02  RAID0/ext4 and RAID0/XFS, capacity and zero-failure warning.
+  F06.03  RAID10/ext4 and RAID10/XFS, four or more disks.
+  F06.04  RAID5/ext4 and RAID5/XFS, three or more disks.
+  F06.05  RAID6/ext4 and RAID6/XFS, four or more disks.
+  F06.06  Array identity, boot array, EFI fallback and resync status.
+
+F07  BTRFS MULTI-DISK
+  F07.01  RAID1, healthy boot and boot with one member removed.
+  F07.02  Single and RAID0 profiles, capacity and failure warnings.
+  F07.03  RAID10 with four or more disks.
+  F07.04  RAID1C3 with three or more; RAID1C4 with four or more.
+  F07.05  Metadata profile, compression algorithm and level choices.
+  F07.06  Degraded root, mirrored boot assembly and surviving EFI.
+
+F08  DIRECTORY LAYOUT
+  F08.01  Default /tmp, /var and /home inside root.
+  F08.02  Separate directory sizes or subvolumes/datasets where eligible.
+  F08.03  Capacity checks and mounted directory layout after cold boot.
+
+F09  IDENTITY AND SSH
+  F09.01  Server name and non-root sudo administrator.
+  F09.02  SSH public-key input, validation and key-only login.
+  F09.03  Password confirmation, SSH/console login and sudo.
+  F09.04  Root SSH disabled; no credentials exposed in logs or screens.
+  F09.05  The same system display appears on local console and SSH.
+          Interactive administrator SSH then offers the Bash setup menu;
+          shell, disconnect and noninteractive commands work normally.
+
+F10  INSTALL EXECUTION AND BOOT HANDOFF
+  F10.01  Six visible tasks, ongoing output and heartbeat during delays.
+  F10.02  EFI, initramfs, kernel and GRUB installed to selected DriveOS.
+  F10.03  Install log survives from first target mount through cleanup.
+  F10.04  Completion shutdown/restart choices; disk-first next boot.
+  F10.05  Failure reports and recovery after interrupted install.
+
+F11  POST-BOOT SERVER
+  F11.01  Console and SSH welcome with system, network and capacity.
+  F11.02  Storage list with root/boot/EFI, media, format and member status.
+  F11.03  CPU, GPU and driver details; responsive welcome rendering.
+  F11.04  Minimal running services, memory footprint and apt update.
+
+F12  TECHE UTILITY AND FUTURE LAYERS
+  F12.01  teche -v, v, --help and PATH entry.
+  F12.02  get verifies URL, SHA256, ZIP paths and manifest before caching.
+  F12.03  install calls get, opens text menu and runs verified install.sh.
+  F12.04  Root required for system changes; status remains read-only.
+  F12.05  Published WorkDesk URL is supplied and tested separately.
+
+F13  POLICY, LOGGING AND AUDIT
+  F13.01  /techev1.0/servosv1.0 owns ServOS policy, features and logs;
+          scripts, catalog, state and cache links resolve to standard paths.
+          /var/log/teche, /etc/teche/policy.d and package-doc features are
+          compatibility links back to the ServOS subtree.
+  F13.02  Policy and feature register are installed and readable.
+  F13.03  Install, operations, audit and WorkDesk log sections exist.
+  F13.04  Event lines start YYYY.MM.DD HH.MM.SS UTC; modes are correct.
+  F13.05  Disk erasure and install checks appear in audit/events.log.
+  F13.06  teche action start and result appear in operations and audit logs.
+  F13.07  No automatic TechE log deletion; monitor available DriveOS space.
+  F13.08  Debian journal and native PVE host logs remain independent.
+  F13.09  A future TechE component receives its own versioned subtree;
+          ServOS never creates or populates /techev1.0/pvev1.0/.
+  F13.10  Root-only initial install manifest records stable disk IDs and
+          configuration choices without passwords, public keys or secrets.
+
+F14  TEXT UI
+  F14.01  Consistent monochrome header, footer and focused action.
+  F14.02  All screens fit 80x24 and larger terminal sizes; scroll when needed.
+  F14.03  Back, Enter, Tab and disk-selection behavior remain predictable.
+  F14.04  No duplicate progress text or silent long-running stage.
+
+F15  RELEASE AND REBUILD
+  F15.01  Source compile, simulations and focused tests pass.
+  F15.02  Pinned base ISO and every downloaded build input hash verify.
+  F15.03  Final ISO installs and boots from the exact released checksum.
+  F15.04  Source, ISO, base input, guide, QA ledger and hashes are packaged.
+
+F16  EXPANSION CONTRACT
+  F16.01  WorkDesk or another TechE role extends policy and feature groups.
+  F16.02  Role-specific TechE records get a named, versioned subtree below
+          /techev1.0/; they do not share the ServOS logs directory.
+  F16.03  Role installation does not relocate or rewrite Debian/PVE logs.

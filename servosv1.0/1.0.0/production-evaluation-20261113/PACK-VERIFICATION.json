@@ -1,0 +1,13 @@
+{
+  "state": "LOCAL_PACKET_INTEGRITY_PASS; NO_NEW_ISO_BUILD; PUBLICATION_NOT_RUN",
+  "original_iso_bytes": 71696384,
+  "original_iso_sha256": "b449436c0575a0dd95d61a3a228b0cbe465f415b64dea392352b1da2c04556cf",
+  "one_iso_transport_bytes": 71696582,
+  "one_iso_transport_sha256": "ffa059186659f92b8528a74e5c30fdc0c526c3cdd10b3237a240f13687548cba",
+  "original_public_assets": 5,
+  "source_zip_members_extracted": 39,
+  "original_repository_files_preserved": 123,
+  "gallery_images_verified": 26,
+  "local_content_links_checked": 194,
+  "owner_reported_H_pass": "reported in chat 2026-11-13; supporting H receipt not included in this packet"
+}
