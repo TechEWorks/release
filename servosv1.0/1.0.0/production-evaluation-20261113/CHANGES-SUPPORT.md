@@ -2,7 +2,7 @@
 
 ## What changed in this content draft
 
-The latest published ISO, source ZIP, base input, manifest and original checksums are unchanged. This local content packet adds a direct reader path, [complete five-asset index](ASSET-INDEX.md), [feature boundary matrix](SCOPE-MATRIX.md), [exact-ISO case matrix](RELEASE-QA-MATRIX.tsv), [17-screen capability gallery](gallery/README.md), [known-issue register](KNOWN-ISSUES-REGISTER.tsv), [human/AI installation](INSTALL-HUMAN-AI.md) and [build instructions](BUILD-HUMAN-AI.md), [lifecycle boundary](LIFECYCLE.md), and [exact ISO component and source reconciliation](ISO-COMPONENT-INVENTORY.md). It is a documentation and presentation proposal, not a software update or public release event. There is no earlier public ServOS version identified in the 1.0.0 release record to compare against.
+The latest published ISO, source ZIP, base input, manifest and original checksums are unchanged. This public documentation mirror adds a direct reader path, [complete five-asset index](ASSET-INDEX.md), [feature boundary matrix](SCOPE-MATRIX.md), [exact-ISO case matrix](RELEASE-QA-MATRIX.tsv), [17-screen capability gallery](gallery/README.md), [known-issue register](KNOWN-ISSUES-REGISTER.tsv), [human/AI installation](INSTALL-HUMAN-AI.md) and [build instructions](BUILD-HUMAN-AI.md), [lifecycle boundary](LIFECYCLE.md), and [exact ISO component and source reconciliation](ISO-COMPONENT-INVENTORY.md). It is a documentation and presentation proposal, not a software update or public release event. There is no earlier public ServOS version identified in the 1.0.0 release record to compare against.
 
 ## Support and private reporting
 
