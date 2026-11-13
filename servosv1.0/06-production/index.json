@@ -3,7 +3,7 @@
   "stage": "06-production",
   "release_id": 444202627,
   "release_tag": "servosv1.0-v1.0.0-06-production-review.1",
-  "release_state": "DRAFT_REVIEW_NOT_PUBLIC",
+  "release_state": "PUBLIC_06_PRODUCTION_REVIEW_PRERELEASE_GATES_OPEN",
   "source_release_repo_commit": "47bacdd54fc41af54416c6833465d8b6064cb057",
   "product_existing_iso_exception_commit": "09fff097e543487813560c5a722559b77f950121",
   "original_public_iso_sha256": "b449436c0575a0dd95d61a3a228b0cbe465f415b64dea392352b1da2c04556cf",
@@ -45,5 +45,6 @@
   "rights_review": "OPEN",
   "exact_iso_qa_completion": "OPEN",
   "independent_delivery_review": "OPEN",
-  "anonymous_public_readback": "NOT_RUN_DRAFT"
+  "anonymous_public_readback": "PASS_4_ASSETS_FULL_HASH",
+  "public_release_url": "https://github.com/TechEWorks/release/releases/tag/servosv1.0-v1.0.0-06-production-review.1"
 }
