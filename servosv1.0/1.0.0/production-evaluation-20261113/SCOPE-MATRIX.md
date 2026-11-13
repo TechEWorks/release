@@ -21,4 +21,8 @@ This matrix maps the original source's numbered [feature register](source-featur
 | F15 Release/rebuild | Pinned source/input, ISO and checksum checks. | Source/build checks and a byte-identical public rebuild recorded. Full upstream SBOM/notice audit and release signature remain open. |
 | F16 Extension contract | Future role packages may extend the base. | No role package is part of the ISO. This is a boundary, not an installed capability claim. |
 
+## Requested scripts-only handoff
+
+The requested `TechE.ScriptsV1.0` root folder, installed `/teche.scripts/v1.0/` path, script-loading command, account-wide PATH setup and login/SSH script address are **not evidenced** in the exact published [source ZIP](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/TechE-ServOS-13.7-v1.0-SOURCE.zip) or the [ISO/initrd file inventory](ISO-COMPONENT-INVENTORY.md). The source ZIP does contain an installer `bootstrap.sh` and the `teche` utility; the published QA record reports `teche -v` on a tested path. This source/inventory check does not replace an installed-system check. Do not treat the requested scripts handoff as a delivered feature of the unchanged 1.0.0 ISO without a separate exact-output observation and Business decision.
+
 **Release decision boundary:** The matrix tells a reader what is declared, what was observed on the exact public ISO and what remains unverified. It does not promote a Beta result to the published ISO, expand tested hardware, or approve a future scripts-only release.
