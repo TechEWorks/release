@@ -1,6 +1,6 @@
 # TechE Works ServOS 1.0.0 | 06 Production review
 
-**State: draft review.** The 06 release ID is `444202627` and its planned tag is `servosv1.0-v1.0.0-06-production-review.1`. Four assets are uploaded and hash-verified for maintainers. They are not anonymous public downloads while this release is a draft. The [original public 1.0.0 release](https://github.com/TechEWorks/release/releases/tag/servosv1.0-v1.0.0) remains live.
+**State: public 06 Production review prerelease; gates open.** [Download the four verified release assets](https://github.com/TechEWorks/release/releases/tag/servosv1.0-v1.0.0-06-production-review.1). Release ID `444202627`, tag `servosv1.0-v1.0.0-06-production-review.1`. The [original public 1.0.0 release](https://github.com/TechEWorks/release/releases/tag/servosv1.0-v1.0.0) remains live.
 
 ServOS is a text installer for an administrator preparing a minimal Debian 13.7 server. It puts disk identity, storage and network choices, the typed erase decision, and installation progress in one console workflow. [See the 17-screen capability gallery](../1.0.0/production-evaluation-20261113/gallery/README.md). The [original exact-ISO QA report](../1.0.0/QA.md) records tested VM paths and their limits; other-build images illustrate capabilities without transferring a QA pass.
 
@@ -21,4 +21,4 @@ For immediate public use of the unchanged ISO, use its [original public download
 
 The [feature boundary](../1.0.0/production-evaluation-20261113/SCOPE-MATRIX.md), [known issues](../1.0.0/production-evaluation-20261113/KNOWN-ISSUES-AND-LIMITS.md), [human and AI build instructions](../1.0.0/production-evaluation-20261113/BUILD-HUMAN-AI.md), and [rights packet](../1.0.0/production-evaluation-20261113/RIGHTS-DECISION-PACKET.md) show the current evidence and limits. The requester approved a [documented S4 exception](https://github.com/TechEWorks/servosv1.0/blob/main/06-production/release-engineering/decisions/EXC-001%20existing%20ISO%20build%20route.md) to keep this exact already published ISO instead of making a new clean ISO build. That exception does not pass the other gates.
 
-**Still open:** digest-bound Business receiving and rights decisions, remaining exact-ISO QA evidence and issue disposition, independent delivery review, and anonymous public asset/page readback. No new ISO build, new QA pass, or 06 Production gate approval is claimed here.
+**Still open:** digest-bound Business receiving and rights decisions, remaining exact-ISO QA evidence and issue disposition, independent delivery review, and final page review. All four public assets were anonymously downloaded and independently hash-verified. No new ISO build, new QA pass, or 06 Production gate approval is claimed here.
