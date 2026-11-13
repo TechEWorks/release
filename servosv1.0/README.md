@@ -32,6 +32,10 @@ system installed on it.
   and follow the [build guide](1.0.0/BUILD.md).
 - **Evaluate the release:** read the [full feature path](1.0.0/FEATURES.md)
   and [exact-release QA record](1.0.0/QA.md).
+- **Review the current Production evaluation:** start with the
+  [public evidence status](1.0.0/production-evaluation-20261113/PUBLIC-STATUS.md),
+  then inspect the [front page, capability gallery and detailed records](1.0.0/production-evaluation-20261113/README.md).
+  This evaluation is **not a 9+ Production gate pass** and adds no new ISO asset.
 
 ## S4 release map — request, output and proof
 
