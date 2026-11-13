@@ -35,7 +35,7 @@ system installed on it.
 - **Review the current Production evaluation:** start with the
   [public evidence status](1.0.0/production-evaluation-20261113/PUBLIC-STATUS.md),
   then inspect the [front page, capability gallery and detailed records](1.0.0/production-evaluation-20261113/README.md).
-  This evaluation is **not a 9+ Production gate pass** and adds no new ISO asset.
+  This evidence update adds no new ISO asset or approval decision.
 
 ## S4 release map — request, output and proof
 

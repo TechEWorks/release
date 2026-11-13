@@ -14,7 +14,7 @@ This record separates the **existing public ISO release** from this **local cont
 | Existing publication | `2026-11-05T06:49:58Z`; public by URL | [captured API record](publication-record/release-api.json) |
 | ISO | `TechE-ServOS-13.7-v1.0-amd64-network.iso`, 71,696,384 bytes, SHA-256 `b449436c0575a0dd95d61a3a228b0cbe465f415b64dea392352b1da2c04556cf` | [asset index](ASSET-INDEX.md) |
 | Original audience and maturity | Public, non-prerelease GitHub distribution | Captured API record |
-| S4 Production delivery approval of this content packet | **NOT RECORDED** | [rubric status](RUBRIC-STATUS.md) |
+| S4 Production delivery approval of this content packet | **NOT RECORDED** | [delivery route](DELIVERY-ROUTE.md) |
 | New packet publication URL and UTC | **NOT YET PUBLISHED** | Local [packet verification](PACK-VERIFICATION.json) |
 
 The user's report on 13 November 2026 says Group H passes. The corresponding independent review/readback receipt and exact packet identity have not been supplied in this local packet. This statement records the report; it does not invent a review record. Any new packet publication needs its own versioned URL and readback tied to its actual ZIP hash.
