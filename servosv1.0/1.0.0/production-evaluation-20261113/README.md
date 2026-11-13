@@ -2,7 +2,7 @@
 
 **Repository mirror:** [Read publication and asset status first](PUBLIC-STATUS.md). This directory omits large binaries included in the complete local packet; its S4 Production evaluation remains open.
 
-**Content state:** prepared for the unchanged latest published ISO. A separate local content ZIP and one-file ISO transport have been packaged and verified. This public documentation mirror omits those files; the GitHub release still serves its original five assets.
+**Content state:** prepared for the unchanged latest published ISO. The original local content ZIP and one-file ISO transport passed integrity checks. The content ZIP still contains 26 captures, including nine excluded from the current 17-screen public gallery; it is **not approved for publication** and must be curated and rehashed. This public documentation mirror omits those files; the GitHub release still serves its original five assets.
 
 **For:** an administrator installing a minimal Debian 13.7 server on a selected disk or disk set. **Job:** inspect the target, choose supported storage and network settings, confirm the erase operation, and reach an SSH-ready system after boot. ServOS brings those decisions into one text installer. [Install instructions](https://github.com/TechEWorks/release/blob/d89769b1695c4f4965404ee5317f54303ab6abf8/servosv1.0/1.0.0/INSTALL.md) · [exact public-ISO QA](https://github.com/TechEWorks/release/blob/d89769b1695c4f4965404ee5317f54303ab6abf8/servosv1.0/1.0.0/QA.md).
 
