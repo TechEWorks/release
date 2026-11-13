@@ -1,11 +1,10 @@
 # ServOS capabilities — full-width screen gallery
 
-Twenty-six original, unaltered screen captures show the installer and installed server across the ServOS v1.0 line. Choose a category below. [Capture identities and file hashes](capture-manifest.tsv) provide the technical provenance in one place.
+Seventeen original, unaltered screen captures show the installer workflow across the ServOS v1.0 line. Choose a category below. [Capture identities and file hashes](capture-manifest.tsv) provide the technical provenance in one place.
 
 - [Disk safety](#disk-safety)
 - [Storage](#storage)
 - [Progress](#progress)
-- [First boot](#first-boot)
 
 ## Disk safety
 
@@ -114,60 +113,3 @@ The progress screen shows completion of all six tasks.
 The completion screen gives the log path and next boot action.
 
 ![Finish and boot: The completion screen gives the log path and next boot action.](screens/f2c20f2/finish-and-boot.png)
-
-## First boot
-
-### Published ISO first boot
-
-The installed server shows network, storage, capacity and SSH details.
-
-![Published ISO first boot: The installed server shows network, storage, capacity and SSH details.](screens/public/published-iso-first-boot.png)
-
-### Ext4 server console
-
-A single-disk ext4 installation reaches the system summary.
-
-![Ext4 server console: A single-disk ext4 installation reaches the system summary.](screens/bfc83/ext4-server-console.png)
-
-### ZFS mirror console
-
-The installed system displays ZFS root and boot pools.
-
-![ZFS mirror console: The installed system displays ZFS root and boot pools.](screens/bfc83/zfs-mirror-console.png)
-
-### RAID1 with XFS
-
-The system summary shows XFS root on an mdadm array.
-
-![RAID1 with XFS: The system summary shows XFS root on an mdadm array.](screens/bfc83/raid1-with-xfs.png)
-
-### Btrfs RAID1 console
-
-The installed server displays Btrfs root on selected drives.
-
-![Btrfs RAID1 console: The installed server displays Btrfs root on selected drives.](screens/bfc83/btrfs-raid1-console.png)
-
-### Ext4 disk boot
-
-The machine reaches the installed server console.
-
-![Ext4 disk boot: The machine reaches the installed server console.](screens/582e026/ext4-disk-boot.png)
-
-### Btrfs RAID1 disk boot
-
-The installed server reaches its Btrfs system console.
-
-![Btrfs RAID1 disk boot: The installed server reaches its Btrfs system console.](screens/582e026/btrfs-raid1-disk-boot.png)
-
-### XFS disk boot
-
-The server reaches its console with XFS root.
-
-![XFS disk boot: The server reaches its console with XFS root.](screens/582e026/xfs-disk-boot.png)
-
-### Installed ext4 system
-
-The machine reaches the Debian server console from disk.
-
-![Installed ext4 system: The machine reaches the Debian server console from disk.](screens/f2c20f2/installed-ext4-system.png)
-
