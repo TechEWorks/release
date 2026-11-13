@@ -1,6 +1,6 @@
 # ServOS 1.0.0 — current channel and proposed S4 delivery route
 
-This record separates an **observed public release** from an **evaluated local packet**. A local score, copied ISO or page preview does not grant a Production gate.
+This record separates an **observed public release** from an **evaluated local packet**. A copied ISO or page preview does not grant a Production gate.
 
 | Dimension | Existing public 1.0.0 | Current content packet |
 |---|---|---|
@@ -16,7 +16,7 @@ This record separates an **observed public release** from an **evaluated local p
 
 1. Preserve the existing release and all five original assets at their current URLs by default. Record an explicit retention/retirement decision if this changes; public history cannot be made secret by renaming a page.
 2. Approve the new distribution version and immutable `release_id` for any **new shipped packet bytes**. Do not silently replace an existing 1.0.0 asset under its old name or claim the old tag targets the new packet. Record the exact source commit, unchanged ISO digest, packet digest and one-ISO transport digest in the new manifest.
-3. Record stage `06 Production`, candidate/build-run ID, evaluation ID, proposed delivery-pull review ID and actual gate decision as separate records. Stages `04 Public Review` and `05 Pre-production` may be marked `N_A` only with their actual owner-approved reasons. The current content and asset scores are an evaluation, not a gate.
+3. Record stage `06 Production`, candidate/build-run ID, evaluation ID, proposed delivery-pull review ID and actual gate decision as separate records. Stages `04 Public Review` and `05 Pre-production` may be marked `N_A` only with their actual owner-approved reasons. The current documentation does not itself grant the gate.
 4. After approved Business scope, rights, exact-ISO QA and independent review, generate the S4 versioned page path and random page key; publish the complete approved asset set. Record public route, UTC, visibility, Latest/current pointer and responsible operator. A preview, if used, is labelled public exposure and has its own recorded route.
 5. Independently retrieve every new URL and verify bytes, hashes, links, commands and image rendering. Record H.02–H.04 from that actual event. Keep the old release accessible unless a separately approved retirement copy-and-verify procedure is completed.
 

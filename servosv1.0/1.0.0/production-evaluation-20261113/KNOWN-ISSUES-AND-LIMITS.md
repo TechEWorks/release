@@ -1,6 +1,6 @@
 # Known Issues and Bugs — ServOS public 1.0.0
 
-This is a **content-draft reading index** of the [published 1.0.0 QA record](https://github.com/TechEWorks/release/blob/d89769b1695c4f4965404ee5317f54303ab6abf8/servosv1.0/1.0.0/QA.md), not a replacement for a reviewed issue tracker. A stable public bug ticket, severity/owner decision and fix target were not found in the release record; those fields remain open under the S4 rubric.
+This is a **content-draft reading index** of the [published 1.0.0 QA record](https://github.com/TechEWorks/release/blob/d89769b1695c4f4965404ee5317f54303ab6abf8/servosv1.0/1.0.0/QA.md), not a replacement for a reviewed issue tracker. A stable public bug ticket, severity/owner decision and fix target were not found in the release record; those fields remain open.
 
 | Pack reference | Classification | Trigger and observed user impact | Workaround / status |
 |---|---|---|---|
