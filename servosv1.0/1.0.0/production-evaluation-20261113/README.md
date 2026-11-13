@@ -2,7 +2,7 @@
 
 **Repository mirror:** [Read publication and asset status first](PUBLIC-STATUS.md). This directory omits large binaries included in the complete local packet; its S4 Production evaluation remains open.
 
-**Content state:** prepared for the unchanged latest published ISO. This local content ZIP and one-file ISO transport have been packaged and verified. The GitHub release still serves its original five assets; links to this new local packet are not public until separately published and read back.
+**Content state:** prepared for the unchanged latest published ISO. A separate local content ZIP and one-file ISO transport have been packaged and verified. This public documentation mirror omits those files; the GitHub release still serves its original five assets.
 
 **For:** an administrator installing a minimal Debian 13.7 server on a selected disk or disk set. **Job:** inspect the target, choose supported storage and network settings, confirm the erase operation, and reach an SSH-ready system after boot. ServOS brings those decisions into one text installer. [Install instructions](https://github.com/TechEWorks/release/blob/d89769b1695c4f4965404ee5317f54303ab6abf8/servosv1.0/1.0.0/INSTALL.md) · [exact public-ISO QA](https://github.com/TechEWorks/release/blob/d89769b1695c4f4965404ee5317f54303ab6abf8/servosv1.0/1.0.0/QA.md).
 
@@ -10,7 +10,7 @@
 
 ## Get, check and install
 
-1. **Download the deployable ISO:** [official GitHub asset](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/TechE-ServOS-13.7-v1.0-amd64-network.iso). This packet also contains the [one-ISO transport ZIP](assets/TechE-ServOS-13.7-v1.0-amd64-network.one-file.zip) (71,696,582 bytes; SHA-256 `ffa059186659f92b8528a74e5c30fdc0c526c3cdd10b3237a240f13687548cba`).
+1. **Download the deployable ISO:** [official GitHub asset](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/TechE-ServOS-13.7-v1.0-amd64-network.iso). The separately verified one-ISO transport ZIP is part of the local review packet, not a public download.
 2. **Verify before use:** compare the ISO with the [original SHA256SUMS](https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/SHA256SUMS.txt). The [packet verification procedure](VERIFICATION.md) checks its transport member against the original ISO. A checksum detects changes; the original release does not claim a cryptographic signature.
 3. **Install:** x86-64 UEFI, Secure Boot off, wired IPv4, a reachable Debian mirror, at least 8 GiB per selected disk and a console are required. The selected whole disks are erased only after the review and typed `ERASE`. Follow the [numbered install guide](https://github.com/TechEWorks/release/blob/d89769b1695c4f4965404ee5317f54303ab6abf8/servosv1.0/1.0.0/INSTALL.md), detach the ISO, cold boot from the installed disk, then run the [safe first-boot checks](VERIFICATION.md#safe-first-boot-checks).
 
