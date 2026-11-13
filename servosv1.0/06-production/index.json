@@ -1,0 +1,49 @@
+{
+  "product": "ServOS",
+  "stage": "06-production",
+  "release_id": 444202627,
+  "release_tag": "servosv1.0-v1.0.0-06-production-review.1",
+  "release_state": "DRAFT_REVIEW_NOT_PUBLIC",
+  "source_release_repo_commit": "47bacdd54fc41af54416c6833465d8b6064cb057",
+  "product_existing_iso_exception_commit": "09fff097e543487813560c5a722559b77f950121",
+  "original_public_iso_sha256": "b449436c0575a0dd95d61a3a228b0cbe465f415b64dea392352b1da2c04556cf",
+  "assets": [
+    {
+      "role": "PRIMARY_DEPLOYABLE_ISO",
+      "name": "TechE-ServOS-13.7-v1.0-amd64-network.iso",
+      "asset_id": 743586737,
+      "bytes": 71696384,
+      "sha256": "b449436c0575a0dd95d61a3a228b0cbe465f415b64dea392352b1da2c04556cf",
+      "state": "uploaded"
+    },
+    {
+      "role": "ONE_ISO_TRANSPORT",
+      "name": "TechE-ServOS-13.7-v1.0-amd64-network.one-file.zip",
+      "asset_id": 743588110,
+      "bytes": 71696562,
+      "sha256": "8e99031d820ec1c225e429f7c939dad8f5d89246f0419b388251e5b450d4f6d7",
+      "state": "uploaded"
+    },
+    {
+      "role": "ORIGINAL_SOURCE_ARCHIVE",
+      "name": "TechE-ServOS-13.7-v1.0-SOURCE.zip",
+      "asset_id": 743588620,
+      "bytes": 115286,
+      "sha256": "f63ce9c9dde59ff4e8f5b9260a589f32bfaec224de72f66ee0900001cd526013",
+      "state": "uploaded"
+    },
+    {
+      "role": "06_REVIEW_CONTENT_PACKET",
+      "name": "TechE-ServOS-1.0.0-06-production-review-pack-20261113.zip",
+      "asset_id": 743578048,
+      "bytes": 207608872,
+      "sha256": "3b69180f76f7045bd3cb5594fbc2cccebde08dc495fad6bdb5fa3306e7171516",
+      "state": "uploaded"
+    }
+  ],
+  "business_receiving": "OPEN",
+  "rights_review": "OPEN",
+  "exact_iso_qa_completion": "OPEN",
+  "independent_delivery_review": "OPEN",
+  "anonymous_public_readback": "NOT_RUN_DRAFT"
+}
