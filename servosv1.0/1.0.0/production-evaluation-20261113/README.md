@@ -1,6 +1,6 @@
 # TechE ServOS 1.0.0 — release content draft
 
-**Repository mirror:** [Read publication and asset status first](PUBLIC-STATUS.md). This directory omits large binaries included in the complete local packet; its S4 Production evaluation remains open.
+**Repository mirror:** [Read publication and asset status first](PUBLIC-STATUS.md). This directory omits large binaries included in the original local evaluation packet; its S4 Production evaluation remains open.
 
 **Content state:** prepared for the unchanged latest published ISO. The original local content ZIP and one-file ISO transport passed integrity checks. The content ZIP still contains 26 captures, including nine excluded from the current 17-screen public gallery; it is **not approved for publication** and must be curated and rehashed. This public documentation mirror omits those files; the GitHub release still serves its original five assets.
 
