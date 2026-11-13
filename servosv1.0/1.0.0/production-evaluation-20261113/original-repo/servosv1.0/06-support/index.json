@@ -1,0 +1,15 @@
+{
+  "schema_version": 2,
+  "product_id": "servosv1.0",
+  "stage_id": "06",
+  "stage_path": "06-support",
+  "status": "EMPTY",
+  "publication": "NOT_PUBLISHED",
+  "reason": "No approved public stage deliverable recorded in inspected catalog.",
+  "public_release_reference": "../04-base-release/README.md",
+  "product_version": "1.0.0",
+  "allowed_audiences": [],
+  "assets": [],
+  "withdrawn": false,
+  "superseded_by": null
+}

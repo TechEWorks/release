@@ -1,0 +1,17 @@
+{
+  "baseline_repo_commit": "d89769b1695c4f4965404ee5317f54303ab6abf8",
+  "release_id": 434866684,
+  "release_tag": "servosv1.0-v1.0.0",
+  "counts": {
+    "github_release_asset": 5,
+    "github_release_record": 2,
+    "public_repo": 35,
+    "public_repo_support": 11,
+    "source_zip_member": 39
+  },
+  "total_inventory_rows": 92,
+  "mapped_rows": 92,
+  "relative_links_checked": 97,
+  "missing_relative_links": [],
+  "source_zip_member_digest_sha256": "f1098e43ed39cc9137025f69450feb099c2f981476c31406b7fac525ce24c879"
+}

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TechE ServOS 1.0.0 installs a minimal Debian server with guided disk review, storage choices and SSH-ready first boot.">
+  <title>TechE ServOS 1.0.0 | guided Debian server installation</title>
+  <style>
+    :root { color-scheme: light; --ink:#14253a; --muted:#53657a; --line:#d8e1ec; --blue:#075fa7; --navy:#081e35; --pale:#f5f8fc; --white:#fff; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--white); font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif; }
+    a { color:var(--blue); text-underline-offset:3px; }
+    a:focus-visible { outline:3px solid #ffb936; outline-offset:3px; }
+    .wrap { max-width:1280px; margin:auto; padding:0 clamp(1rem,3vw,3rem); }
+    .top { background:var(--navy); color:var(--white); }
+    .top .wrap { padding-top:1rem; padding-bottom:4.2rem; }
+    .nav { display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; }
+    .nav strong { font-size:1.05rem; letter-spacing:.02em; }
+    .nav a { color:#dbefff; margin-left:1rem; }
+    .eyebrow { margin:4.3rem 0 .8rem; color:#80c6fb; font-size:.78rem; letter-spacing:.15em; text-transform:uppercase; font-weight:750; }
+    h1 { max-width:960px; margin:0; font-size:clamp(2.45rem,5.5vw,5rem); letter-spacing:-.055em; line-height:1.05; }
+    .lead { max-width:800px; font-size:clamp(1.08rem,1.7vw,1.34rem); color:#d8e6f5; margin:1.4rem 0 2rem; }
+    .actions { display:flex; gap:.75rem; flex-wrap:wrap; }
+    .button { display:inline-block; border:1px solid #7dbfe9; border-radius:.5rem; padding:.84rem 1.2rem; color:#fff; font-weight:720; text-decoration:none; }
+    .button.primary { color:#08213b; background:#a3d9ff; border-color:#a3d9ff; }
+    .button:hover { filter:brightness(1.08); }
+    .facts { display:flex; gap:1.3rem 2.6rem; flex-wrap:wrap; margin-top:2.4rem; color:#cae0f3; }
+    .facts span { display:block; color:#fff; font-weight:730; font-size:1.07rem; }
+    main section { padding:4rem 0; border-bottom:1px solid var(--line); }
+    h2 { font-size:clamp(1.8rem,2.8vw,2.55rem); line-height:1.15; letter-spacing:-.035em; margin:0 0 .8rem; }
+    .intro { max-width:790px; color:var(--muted); margin:0 0 1.8rem; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+    .card { border:1px solid var(--line); border-radius:.65rem; padding:1.35rem; background:var(--pale); }
+    .card h3 { margin:0 0 .45rem; font-size:1.2rem; }
+    .card p { margin:0; color:var(--muted); }
+    .proof { width:100%; border-collapse:collapse; font-size:.95rem; }
+    .proof th,.proof td { padding:.9rem .8rem; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    .proof th { color:#41546b; background:var(--pale); }
+    .proof td:first-child { font-weight:690; }
+    .scroll { overflow:auto; }
+    .showcase { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    figure { margin:0; border:1px solid var(--line); border-radius:.65rem; overflow:hidden; background:#04070c; }
+    figure img { display:block; width:100%; height:auto; }
+    figcaption { background:var(--white); padding:.8rem 1rem; font-weight:650; }
+    .rail { display:flex; gap:.75rem 1.4rem; flex-wrap:wrap; }
+    .note { background:#fff7e6; border-left:4px solid #bc8122; padding:1rem 1.2rem; max-width:920px; }
+    code { overflow-wrap:anywhere; }
+    footer { background:var(--navy); color:#d5e4f3; padding:2.5rem 0; }
+    footer a { color:#b5ddfa; }
+    @media(max-width:760px) { .grid,.showcase { grid-template-columns:1fr; } .nav a { margin-left:0; margin-right:1rem; } }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <nav class="nav" aria-label="Primary"><strong>TechE Works / ServOS 1.0.0</strong><div><a href="#proof">Proof</a><a href="#screens">Screens</a><a href="#build">Build</a><a href="#limits">Limits</a></div></nav>
+      <p class="eyebrow">Published network ISO · Debian 13.7 · x86-64 UEFI</p>
+      <h1>Install Debian on the storage you choose. See exactly what will be erased.</h1>
+      <p class="lead">ServOS gives administrators one text-guided path through disk inspection, eligible storage layouts, network and account setup, explicit erase review, and an SSH-ready first boot.</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/TechE-ServOS-13.7-v1.0-amd64-network.iso">Download the ISO</a>
+        <a class="button" href="https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/SHA256SUMS.txt">Verify SHA-256</a>
+        <a class="button" href="https://github.com/TechEWorks/release/blob/d89769b1695c4f4965404ee5317f54303ab6abf8/servosv1.0/1.0.0/INSTALL.md">Install guide</a>
+      </div>
+      <div class="facts"><div><span>71,696,384 bytes</span>Deployable network ISO</div><div><span>Six storage install paths</span>Recorded on the published ISO</div><div><span>SSH, sudo and APT</span>Checked after tested boots</div></div>
+    </div>
+  </header>
+  <main class="wrap">
+    <section id="value">
+      <h2>One small base. A deliberate install.</h2>
+      <p class="intro">Built for an administrator bringing up a server or VM from a console. Debian Installer supports mdadm and an optional SSH network console; ServOS presents ZFS, Btrfs and mdadm boot-layout choices together in one guided storage flow. It needs a reachable Debian mirror and erases only the whole disks selected at the final typed gate. No desktop or application role is bundled.</p>
+      <div class="grid">
+        <div class="card"><h3>Know the target</h3><p>F03 · Inspect disk model, serial, stable ID and existing partitions before selecting the disk set.</p></div>
+        <div class="card"><h3>Choose the layout</h3><p>F04–F07 · Select an eligible ext4, XFS, ZFS, mdadm or Btrfs path for the chosen drive count. The menu displays capacity and failure-tolerance estimates.</p></div>
+        <div class="card"><h3>Operate remotely</h3><p>F09/F11 · Cold boot the installed Debian base, then use console or SSH for the next server role.</p></div>
+      </div>
+    </section>
+    <section id="proof">
+      <h2>What the published ISO demonstrated</h2>
+      <p class="intro">Each link names a case on the exact public ISO SHA-256 <code>b449436c0575a0dd95d61a3a228b0cbe465f415b64dea392352b1da2c04556cf</code>. All cases used disposable UEFI VM225; the complete conditions and open paths are in the <a href="QA-CROSSWALK.md">case crosswalk</a>.</p>
+      <div class="scroll"><table class="proof"><thead><tr><th scope="col">Storage path</th><th scope="col">Observed result</th><th scope="col">Case</th></tr></thead><tbody>
+        <tr><td>Single-disk ext4</td><td>Install, disk-only boot, SSH, sudo and APT.</td><td><a href="https://github.com/TechEWorks/release/blob/d89769b1695c4f4965404ee5317f54303ab6abf8/servosv1.0/1.0.0/QA.md#L26-L41">Read result</a></td></tr>
+        <tr><td>Single-disk XFS</td><td>XFS root, cold boot, SSH and APT.</td><td><a href="https://github.com/TechEWorks/release/blob/d89769b1695c4f4965404ee5317f54303ab6abf8/servosv1.0/1.0.0/QA.md#L42-L53">Read result</a></td></tr>
+        <tr><td>Single-disk ZFS</td><td>Healthy root and boot pools, datasets and cold boot.</td><td><a href="https://github.com/TechEWorks/release/blob/d89769b1695c4f4965404ee5317f54303ab6abf8/servosv1.0/1.0.0/QA.md#L54-L68">Read result</a></td></tr>
+        <tr><td>Two-disk ZFS mirror</td><td>Cold boot from both EFI members while both disks were present.</td><td><a href="https://github.com/TechEWorks/release/blob/d89769b1695c4f4965404ee5317f54303ab6abf8/servosv1.0/1.0.0/QA.md#L69-L82">Read result</a></td></tr>
+        <tr><td>mdadm RAID1 with XFS</td><td>Healthy arrays and cold boot from both EFI members.</td><td><a href="https://github.com/TechEWorks/release/blob/d89769b1695c4f4965404ee5317f54303ab6abf8/servosv1.0/1.0.0/QA.md#L83-L94">Read result</a></td></tr>
+        <tr><td>Btrfs RAID1</td><td>Static IPv4, SSH key, both EFI paths and one manual same-member recovery.</td><td><a href="https://github.com/TechEWorks/release/blob/d89769b1695c4f4965404ee5317f54303ab6abf8/servosv1.0/1.0.0/QA.md#L95-L138">Read result</a></td></tr>
+      </tbody></table></div>
+    </section>
+    <section id="screens">
+      <h2>See the path before you run it</h2>
+      <p class="intro">Explore 26 wide, unaltered screens covering disk review, storage choices, installation progress and first boot across versioned ServOS builds. Each image's build identity and checksum are in one gallery manifest; the published ISO's observed results are listed above.</p>
+      <div class="showcase">
+        <figure><a href="gallery/screens/public/inspect-disk-identity.png"><img loading="lazy" src="gallery/screens/public/inspect-disk-identity.png" alt="Installer disk inspection with identity and partitions"></a><figcaption>Inspect the disk and its existing partitions</figcaption></figure>
+        <figure><a href="gallery/screens/public/compare-zfs-layouts.png"><img loading="lazy" src="gallery/screens/public/compare-zfs-layouts.png" alt="Eligible ZFS layouts with capacity estimates"></a><figcaption>Compare eligible ZFS layouts</figcaption></figure>
+        <figure><a href="gallery/screens/f2c20f2/watch-live-work.png"><img loading="lazy" src="gallery/screens/f2c20f2/watch-live-work.png" alt="Numbered installation tasks and live activity pane"></a><figcaption>Watch numbered tasks and live activity</figcaption></figure>
+        <figure><a href="gallery/screens/public/published-iso-first-boot.png"><img loading="lazy" src="gallery/screens/public/published-iso-first-boot.png" alt="Published ISO first-boot console showing server details"></a><figcaption>Boot into the server summary</figcaption></figure>
+      </div>
+      <p><a href="gallery/index.html">Open the complete 26-screen gallery →</a> · <a href="gallery/capture-manifest.tsv">Image identities and SHA-256</a></p>
+    </section>
+    <section id="build">
+      <h2>Inspect the source. Rebuild the same image.</h2>
+      <p class="intro">The public release includes its source ZIP, pinned base ISO, manifest and checksums. A public rebuild produced the same ISO SHA-256. Human and AI operators use the same pinned inputs and recorded commands.</p>
+      <div class="rail"><a href="ASSET-INDEX.md">All assets and hashes</a><a href="SCOPE-MATRIX.md">Full feature boundary</a><a href="https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/TechE-ServOS-13.7-v1.0-SOURCE.zip">Source ZIP</a><a href="BUILD-HUMAN-AI.md">Human and AI build guide</a><a href="https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/RELEASE-MANIFEST.json">Release manifest</a><a href="https://github.com/TechEWorks/release/actions/runs/41983978934">Public rebuild record</a></div>
+    </section>
+    <section id="limits">
+      <h2>Know the supported boundary</h2>
+      <p class="intro">The documented tests cover named VM paths. Other layouts, hardware, failure modes and recovery procedures are not implied by a menu option or screenshot.</p>
+      <p class="note">The exact public ISO does not have a complete published upstream component inventory and signature. A ZFS progress label was incorrect during one tested install. See <a href="KNOWN-ISSUES-AND-LIMITS.md">Known Issues and Bugs</a> and the <a href="https://github.com/TechEWorks/release/blob/d89769b1695c4f4965404ee5317f54303ab6abf8/servosv1.0/1.0.0/QA.md#post-release-acceptance-work">full open-check record</a>.</p>
+      <p>This page is a local content draft for the unchanged latest published ISO. It does not assert a new S4 Production approval. <a href="RUBRIC-STATUS.md">Rubric status</a> · <a href="VERIFICATION.md">Verification and safe first-boot checks</a> · <a href="CHANGES-SUPPORT.md">Support and correction</a>.</p>
+    </section>
+  </main>
+  <footer><div class="wrap">TechE Works · ServOS 1.0.0 · <a href="https://github.com/TechEWorks/release/releases/tag/servosv1.0-v1.0.0">Official public release</a> · <a href="mailto:sysadmin@teche.works">sysadmin@teche.works</a></div></footer>
+</body>
+</html>

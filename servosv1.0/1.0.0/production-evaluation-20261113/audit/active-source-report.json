@@ -1,0 +1,17 @@
+{
+  "source_repository": "TechEWorks/servosv1.0",
+  "local_branch": "business/s4-beta-handoff-20261111",
+  "source_commit": "dc276a18ba246fddc493f552f41b8e5ea774935b",
+  "contained_origin_main": "a82f7b3d979174ceaa049bea1c6d49d94f955ed6",
+  "tracked_files": 232,
+  "mapped_files": 232,
+  "dispositions": {
+    "HISTORICAL_REFERENCE": 89,
+    "RETAIN_AND_REVIEW": 18,
+    "REVIEWED_SOURCE_REFERENCE": 33,
+    "SHARED_AUTHORITY": 11,
+    "SHARED_SOURCE": 2,
+    "TRANSFORM": 79
+  },
+  "state": "preliminary path map only; no 06-production build or QA claimed"
+}

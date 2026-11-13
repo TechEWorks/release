@@ -1,0 +1,13 @@
+# Exact published ISO — component inventory and coverage
+
+**Source byte identity:** `TechE-ServOS-13.7-v1.0-amd64-network.iso`, 71,696,384 bytes, SHA-256 `b449436c0575a0dd95d61a3a228b0cbe465f415b64dea392352b1da2c04556cf`. The inventory was generated from those unchanged bytes with `inventory_exact_iso.py`; it is an inventory of this installer medium, **not** a claim that every package installed later over the network is inside the ISO.
+
+| Layer | Inventory | What is covered |
+|---|---|---|
+| ISO filesystem | [298 regular-file paths with bytes and SHA-256](audit/exact-iso-file-inventory.tsv) | Bootloader, kernel, compressed initrd, menus and other regular files extracted by `tar` from the exact ISO |
+| Compressed installer ramdisk | [2,868 newc entries with type, bytes and SHA-256](audit/exact-initrd-file-inventory.tsv) | File, directory and link records inside the ISO's `initrd.xz`; no target-system install inferred |
+| Installer package database | [112 package/version/status rows](audit/exact-initrd-dpkg-status.tsv) | `var/lib/dpkg/status` embedded in the initrd, itself SHA-256 `f19e91a163eb3b5bd588f3ce78910a1dd47af0e76967b4acbca0e21eb509120e` |
+| Source and downloaded builder inputs | [39 source member hashes](audit/source-file-provenance.tsv) and [19 builder-input records](audit/builder-input-provenance.tsv) | Historical source and pinned build inputs, distinct from the final installed Debian system |
+| Installer source-to-binary reconciliation | [22 source/embedded file pairs](audit/source-to-initrd-reconciliation.tsv) | Every `servos/` file in the original source ZIP matches its corresponding exact-ISO initrd file after CRLF-to-LF normalization; zero content differences or absences |
+
+The uncompressed initrd is 78,060,544 bytes; its compressed ISO member is 45,374,916 bytes. The ISO regular-file inventory excludes directory records; the initrd inventory includes them. The source-to-initrd check compares **content**, not archive metadata: all 22 source `servos/` files are identical after the documented line-ending normalization in the build procedure. Build scripts, QA scripts and documentation in the source ZIP are not installer payloads and are not counted as embedded matches. The inventories prove file presence and byte identity only. The 112 package rows reproduce the initrd's own status database and do not establish a complete package SBOM for a server installed from a live Debian mirror. Package licensing, copyright notices, source offers, complete installed-system dependencies and vulnerability dispositions still require separate reconciliation. The [rights decision](RIGHTS-DECISION-PACKET.md) remains open for those points.

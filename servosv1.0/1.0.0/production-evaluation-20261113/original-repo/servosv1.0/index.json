@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "product": "servos",
+  "major_line": "1.0",
+  "releases": [
+    {
+      "version": "1.0.0",
+      "tag": "servosv1.0-v1.0.0",
+      "date": "2026.11.05",
+      "record": "1.0.0/README.md",
+      "manifest": "1.0.0/RELEASE-MANIFEST.json",
+      "qa": "1.0.0/QA.md",
+      "status": "public; post-release qualification open"
+    }
+  ],
+  "stage_catalogs": [
+    {
+      "stage": "00-explore-poc",
+      "record": "00-explore-poc/README.md",
+      "index": "00-explore-poc/index.json",
+      "status": "EMPTY"
+    },
+    {
+      "stage": "01-strawman",
+      "record": "01-strawman/README.md",
+      "index": "01-strawman/index.json",
+      "status": "EMPTY"
+    },
+    {
+      "stage": "02-alpha",
+      "record": "02-alpha/README.md",
+      "index": "02-alpha/index.json",
+      "status": "EMPTY"
+    },
+    {
+      "stage": "03-beta",
+      "record": "03-beta/README.md",
+      "index": "03-beta/index.json",
+      "status": "EMPTY"
+    },
+    {
+      "stage": "04-base-release",
+      "record": "04-base-release/README.md",
+      "index": "04-base-release/index.json",
+      "status": "AVAILABLE"
+    },
+    {
+      "stage": "05-install-deploy",
+      "record": "05-install-deploy/README.md",
+      "index": "05-install-deploy/index.json",
+      "status": "EMPTY"
+    },
+    {
+      "stage": "06-support",
+      "record": "06-support/README.md",
+      "index": "06-support/index.json",
+      "status": "EMPTY"
+    }
+  ]
+}
