@@ -25,7 +25,7 @@ These are observed **VM225 UEFI paths on the published ISO hash above**, not a b
 | Install two-disk ZFS mirror or mdadm RAID1/XFS; cold boot from either EFI member while both members are present. | [ZFS mirror case](https://github.com/TechEWorks/release/blob/d89769b1695c4f4965404ee5317f54303ab6abf8/servosv1.0/1.0.0/QA.md#L69) · [mdadm/XFS case](https://github.com/TechEWorks/release/blob/d89769b1695c4f4965404ee5317f54303ab6abf8/servosv1.0/1.0.0/QA.md#L83) |
 | Install two-disk Btrfs RAID1 using one static IPv4 and SSH-key path; cold boot from both EFI members, then test one missing-member boot and manual recovery. | [Btrfs install case](https://github.com/TechEWorks/release/blob/d89769b1695c4f4965404ee5317f54303ab6abf8/servosv1.0/1.0.0/QA.md#L95) · [degraded recovery case](https://github.com/TechEWorks/release/blob/d89769b1695c4f4965404ee5317f54303ab6abf8/servosv1.0/1.0.0/QA.md#L114) |
 
-Explore the [wide capability gallery](gallery/index.html): 26 full-size screens covering disk inspection, ZFS and mdadm choices, typed erasure, installation progress, ext4, XFS and Btrfs completion, and first boot. The [capture manifest](gallery/capture-manifest.tsv) identifies each image once; the exact public-ISO report above supports the release claims.
+Explore the [wide capability gallery](gallery/index.html): 17 full-size screens covering disk inspection, ZFS and mdadm choices, typed erasure, installation progress, and ext4, XFS and Btrfs completion. The [capture manifest](gallery/capture-manifest.tsv) identifies each image once; the exact public-ISO report above supports the release claims.
 
 ## Source, limits and support
 
