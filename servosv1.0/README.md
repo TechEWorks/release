@@ -36,6 +36,8 @@ system installed on it.
   [public evidence status](1.0.0/production-evaluation-20261113/PUBLIC-STATUS.md),
   then inspect the [front page, capability gallery and detailed records](1.0.0/production-evaluation-20261113/README.md).
   This evidence update adds no new ISO asset or approval decision.
+- **See the installer:** [17 full-size capability screens](1.0.0/production-evaluation-20261113/gallery/README.md)
+  show disk review, ZFS and mdadm choices, typed erasure, progress, and ext4, XFS and Btrfs completion.
 
 ## S4 release map — request, output and proof
 
