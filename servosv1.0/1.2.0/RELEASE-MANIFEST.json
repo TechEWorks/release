@@ -1,0 +1,67 @@
+{
+  "release_id": "servosv1.0-v1.2.0",
+  "product_id": "servos",
+  "product_version": "1.2.0",
+  "distribution": "public",
+  "production_approval": "NOT_APPROVED",
+  "production_qualification": "NOT_RUN on the exact ISO",
+  "source_repo": "https://github.com/TechEWorks/servos",
+  "source_commit": "6b2f19e546ca407ef1c315a46549ba64fffe1dd6",
+  "source_access": "Private repository, tag v1.2.0",
+  "build_run_id": "servos-standalone-20261114",
+  "candidate_id": "servos-1.2.0-standalone-b9190a6d4688",
+  "build_mode": "SERVOS_STANDALONE=1",
+  "platform": "Debian 13 amd64",
+  "selected_input_manifest": {
+    "base_iso_sha256": "7a473b485c3a81406098e2806a6a489b88eb10e44da188db86b92e7a37dfa55a",
+    "storage_kernel_abi": "6.12.107+deb13-amd64"
+  },
+  "standards": {
+    "repo": "TechEWorks/standards",
+    "commit": "d13a8f0b4e564e3453ddde3c9f9300d317bf7af9",
+    "s4_sha256": "43b456fa0fb9870fc3b05e4dc4527bcc72698cab282860343146e2acc75f8d8f"
+  },
+  "outputs": [
+    {
+      "output_id": "network-iso",
+      "name": "TechE-ServOS-13.7-v1.2-amd64-network.iso",
+      "kind": "installer_iso",
+      "bytes": 79036416,
+      "sha256": "b9190a6d46884fdcea0ccbd4ecdb9c778ad0f3796642fa48ff2bbbeacbc1c80e",
+      "locator": "ZIP member"
+    },
+    {
+      "output_id": "network-iso-zip",
+      "name": "TechE-ServOS-13.7-v1.2-amd64-network.iso.zip",
+      "kind": "single_file_zip",
+      "bytes": 67009068,
+      "sha256": "c604bd95a1316c935c01d2bc38297398d5c5eaeba2f8a93eacee09f51ee51da6",
+      "locator": "https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.2.0/TechE-ServOS-13.7-v1.2-amd64-network.iso.zip"
+    },
+    {
+      "output_id": "checksums",
+      "name": "ServOS-v1.2-SHA256SUMS.txt",
+      "kind": "checksums",
+      "bytes": 218,
+      "sha256": "2a639602c9059582f2e0d1ff3d8e254fa38b4f9c09e370b794db4d41113fdac1",
+      "locator": "https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.2.0/ServOS-v1.2-SHA256SUMS.txt"
+    }
+  ],
+  "omitted_outputs": {
+    "WorkDesk": "Out of scope",
+    "Proxmox VE": "Out of scope"
+  },
+  "qa_index": "https://github.com/TechEWorks/release/blob/main/servosv1.0/1.2.0/QA%20index.tsv",
+  "artifact_index": "https://github.com/TechEWorks/release/blob/main/servosv1.0/1.2.0/Artifact%20index.tsv",
+  "build_and_install": "https://github.com/TechEWorks/release/blob/main/servosv1.0/1.2.0/INSTALL.md",
+  "release_url": "https://github.com/TechEWorks/release/releases/tag/servosv1.0-v1.2.0",
+  "previous_release": "https://github.com/TechEWorks/release/releases/tag/servosv1.0-v1.1.0",
+  "signature": null,
+  "source_and_notices": {
+    "source_commit_url": "https://github.com/TechEWorks/servos/commit/6b2f19e546ca407ef1c315a46549ba64fffe1dd6",
+    "public_source_access": "Provisioned separately by TechEWorks",
+    "debian_source": "https://www.debian.org/distrib/packages",
+    "openzfs_source": "https://github.com/openzfs/zfs"
+  },
+  "release_scope": "Standalone network installer. Exact-output live install rerun omitted at the publisher’s request."
+}

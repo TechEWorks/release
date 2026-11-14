@@ -1,0 +1,2 @@
+b9190a6d46884fdcea0ccbd4ecdb9c778ad0f3796642fa48ff2bbbeacbc1c80e  TechE-ServOS-13.7-v1.2-amd64-network.iso
+c604bd95a1316c935c01d2bc38297398d5c5eaeba2f8a93eacee09f51ee51da6  TechE-ServOS-13.7-v1.2-amd64-network.iso.zip

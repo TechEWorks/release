@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="856" height="487" viewBox="0 0 856 487">
+<title>Preparation and live SSH</title><rect width="856" height="487" fill="#10141b"/>
+<g font-family="Menlo,DejaVu Sans Mono,monospace" font-size="16" fill="#e6ebf4">
+<text x="18" y="26" xml:space="preserve">TechE ServOS (13.7) v1.2 | MINIMAL SERVER VERSION</text>
+<text x="18" y="45" xml:space="preserve">Preparing installer  |  Before Step 01 / 09                                 35s</text>
+<text x="18" y="64" xml:space="preserve">-------------------------------------------------------------------------------</text>
+<text x="18" y="83" xml:space="preserve"></text>
+<text x="18" y="102" xml:space="preserve">Loading installer tools in RAM. | Network established (ens18)</text>
+<text x="18" y="121" xml:space="preserve"></text>
+<text x="18" y="140" xml:space="preserve"></text>
+<text x="18" y="159" xml:space="preserve"></text>
+<text x="18" y="178" xml:space="preserve">  PREPARATION TASKS</text>
+<text x="18" y="197" xml:space="preserve">  [x]  01  Detect network and storage controllers</text>
+<text x="18" y="216" xml:space="preserve">  [x]  02  Connect to the Debian package mirror</text>
+<text x="18" y="235" xml:space="preserve">  [x]  03  Download the minimal installer runtime</text>
+<text x="18" y="254" xml:space="preserve">  [x]  04  Check signed package indexes</text>
+<text x="18" y="273" xml:space="preserve">  [x]  05  Load installer tools in memory</text>
+<text x="18" y="292" xml:space="preserve">  [x]  06  Install and start OpenSSH</text>
+<text x="18" y="311" xml:space="preserve">  SSH enabled and active | ssh -t admin@myteche01.local</text>
+<text x="18" y="330" xml:space="preserve">  IP address: 192.0.2.10</text>
+<text x="18" y="349" xml:space="preserve">  [x]  07  Claim a machine name on the local network</text>
+<text x="18" y="368" xml:space="preserve">  Machine name: myteche01</text>
+<text x="18" y="387" xml:space="preserve"></text>
+<text x="18" y="406" xml:space="preserve"></text>
+<text x="18" y="425" xml:space="preserve"></text>
+<text x="18" y="444" xml:space="preserve">-------------------------------------------------------------------------------</text>
+<text x="18" y="463" xml:space="preserve">TechE.Works | Last updated 14 November 2026</text>
+</g></svg>
