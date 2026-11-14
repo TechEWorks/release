@@ -1,4 +1,6 @@
-# TechE ServOS 1.1.0
+# TechE ServOS 1.1.0 archive
+
+Superseded by [ServOS 1.2.0](../1.2.0/README.md). Original downloads and evidence remain available.
 
 A compact network installer for a minimal Debian 13 server. Choose the target disks, review the storage layout and install an SSH-ready system from a local console or remote management console.
 

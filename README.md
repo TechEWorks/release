@@ -14,7 +14,7 @@ licenses.
 | Product | Public release index |
 | --- | --- |
 | WorkDesk 1.0 | [Product and download guide](workdeskv1.0/README.md) · [approved release index](workdeskv1.0/index.json) |
-| ServOS | [Current release 1.1.0](servosv1.0/1.1.0/README.md) · [installer gallery](servosv1.0/1.1.0/screenshots/README.md) · [version index](servosv1.0/index.json) · [1.0.0 archive](servosv1.0/1.0.0/README.md) |
+| ServOS | [Current release 1.2.0](servosv1.0/1.2.0/README.md) · [installer gallery](servosv1.0/1.2.0/screenshots/README.md) · [version index](servosv1.0/index.json) · [1.1.0 archive](servosv1.0/1.1.0/README.md) · [1.0.0 archive](servosv1.0/1.0.0/README.md) |
 | Fleet RMM 1.0 | [fleetrmmv1.0/index.json](fleetrmmv1.0/index.json) |
 | UCP 1.0 | [ucpv1.0/index.json](ucpv1.0/index.json) |
 | Maestro 1.0 | [maestrov1.0/index.json](maestrov1.0/index.json) |

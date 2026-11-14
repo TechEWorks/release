@@ -4,13 +4,23 @@
   "major_line": "1.0",
   "releases": [
     {
+      "version": "1.2.0",
+      "tag": "servosv1.0-v1.2.0",
+      "date": "2026.11.14",
+      "record": "1.2.0/README.md",
+      "manifest": "1.2.0/RELEASE-MANIFEST.json",
+      "qa": "1.2.0/QA.md",
+      "status": "public; exact-ISO production qualification open"
+    },
+    {
       "version": "1.1.0",
       "tag": "servosv1.0-v1.1.0",
       "date": "2026.11.14",
       "record": "1.1.0/README.md",
       "manifest": "1.1.0/RELEASE-MANIFEST.json",
       "qa": "1.1.0/QA.md",
-      "status": "public; exact-ISO production qualification open"
+      "status": "public archive; superseded by 1.2.0",
+      "superseded_by": "1.2.0"
     },
     {
       "version": "1.0.0",
@@ -66,5 +76,5 @@
       "status": "EMPTY"
     }
   ],
-  "latest_version": "1.1.0"
+  "latest_version": "1.2.0"
 }

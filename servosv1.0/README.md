@@ -1,6 +1,10 @@
 # TechE ServOS
 
-**Current release:** [ServOS 1.1.0](1.1.0/README.md) · [downloads](https://github.com/TechEWorks/release/releases/tag/servosv1.0-v1.1.0) · [22 installer screenshots](1.1.0/screenshots/README.md).
+**Current release:** [ServOS 1.2.0](1.2.0/README.md) · [downloads](https://github.com/TechEWorks/release/releases/tag/servosv1.0-v1.2.0) · [installer gallery](1.2.0/screenshots/README.md).
+
+## ServOS 1.1.0 archive
+
+ServOS 1.2.0 supersedes v1.1.0. The [v1.1.0 release record](1.1.0/README.md), [original downloads](https://github.com/TechEWorks/release/releases/tag/servosv1.0-v1.1.0) and [live installer screenshots](1.1.0/screenshots/README.md) remain available.
 
 ## ServOS 1.0.0 archive
 
