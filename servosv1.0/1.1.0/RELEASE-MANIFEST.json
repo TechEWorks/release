@@ -1,0 +1,64 @@
+{
+  "product": "TechE ServOS",
+  "version": "1.1.0",
+  "status": "public",
+  "release_tag": "servosv1.0-v1.1.0",
+  "source": {
+    "target_repository": "TechEWorks/servos",
+    "ci_commit": "d404852c6a05031584e154599e2a54ea300718dd",
+    "commit": "1432160ba27e04004bd8feddf5a35d361a272421",
+    "tag": "v1.1.0",
+    "git_tree": "0af21143bebc81f8a2671622c3c794d9867f374e"
+  },
+  "build_input": {
+    "url": "https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.0.0/BUILD-INPUT-Pinned-Base-ISO.iso",
+    "sha256": "7a473b485c3a81406098e2806a6a489b88eb10e44da188db86b92e7a37dfa55a"
+  },
+  "assets": [
+    {
+      "name": "TechE-ServOS-13.7-v1.1-20261114-final.iso",
+      "bytes": 71696384,
+      "sha256": "6cda5cb36b162980f3309cbb7edef90f948dea9fbe45fcf11ac322789d6c3678",
+      "url": "https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.1.0/TechE-ServOS-13.7-v1.1-20261114-final.iso"
+    },
+    {
+      "name": "servos-v1.1-2026-11-14-final-source.tar.gz",
+      "bytes": 82264,
+      "sha256": "81ca42c160405d2193d5404772d37d00e80e559912200e16c61b48e3d42ba77b",
+      "url": "https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.1.0/servos-v1.1-2026-11-14-final-source.tar.gz"
+    },
+    {
+      "name": "servos-v1.1-2026-11-14-SHA256SUMS.txt",
+      "bytes": 217,
+      "sha256": "1dac50b1fb2cf071b8f70db36a2786488beacf189614dc97176a94480cff0b81",
+      "url": "https://github.com/TechEWorks/release/releases/download/servosv1.0-v1.1.0/servos-v1.1-2026-11-14-SHA256SUMS.txt"
+    }
+  ],
+  "qualification": {
+    "bios_and_uefi_live_installs": "Earlier candidate",
+    "final_iso": "BIOS and UEFI boot entries and installer payload verified",
+    "open": [
+      "Final ISO full BIOS and UEFI installs and cold boots",
+      "Stale RAID summary disposition",
+      "Gating live SSH access",
+      "Release signing"
+    ],
+    "local_ci_replay": {
+      "runner": "Debian 13 on the Proxmox host",
+      "candidate_sha256": "fb566c5c4634ac6799fe22959554124fa96a61bcaee6911094ff0fde8f60601d",
+      "note": "Separate CI candidate with installer files normalized to root ownership. The draft assets still refer to the frozen ISO.",
+      "qa_scripts_passed": 7,
+      "simulated_installs": 6136,
+      "screen_checks": 17936,
+      "github_actions": "Passed on the same CI commit and reproduced the local ISO byte-for-byte"
+    },
+    "hosted_ci": {
+      "source_qa": "https://github.com/TechEWorks/servos/actions/runs/43531086165",
+      "iso_build": "https://github.com/TechEWorks/servos/actions/runs/43531086133"
+    }
+  },
+  "published_at_utc": "2026-11-14T00:16:56Z",
+  "release_url": "https://github.com/TechEWorks/release/releases/tag/servosv1.0-v1.1.0",
+  "signature": null,
+  "recovery": "Restore from backup before reinstalling an earlier version. The installer erases the selected disks."
+}

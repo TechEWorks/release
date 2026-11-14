@@ -1,0 +1,138 @@
+{
+  "build": "TechE-ServOS-13.7-v1.1-20261114-release-candidate.iso",
+  "build_sha256": "e1fabdaee26613505b2223bd9f172ebbade9ca09680787d8c702187fac5c3e54",
+  "screenshots": [
+    {
+      "file": "01-zfs-raidz2.png",
+      "firmware": "UEFI",
+      "capture": "08g-uefi-raidz2.png",
+      "sha256": "c7556da1cdc39939ac4712b120c6d84c9ce6c4b941229674851b321af32919c4"
+    },
+    {
+      "file": "02-zfs-layouts.png",
+      "firmware": "UEFI",
+      "capture": "08f-uefi-layout.png",
+      "sha256": "d31d74c5f8259bf2f80ce415e1fbd837e731612b207a4857063f493011d31aee"
+    },
+    {
+      "file": "03-storage-families.png",
+      "firmware": "UEFI",
+      "capture": "08e-uefi-family.png",
+      "sha256": "35be85c7d76fb7c89377949165eabca814325951ac70892d93e1884782d17e0e"
+    },
+    {
+      "file": "04-drive-info.png",
+      "firmware": "BIOS",
+      "capture": "08a-bios-drive-info.png",
+      "sha256": "0803b0ede81fd1479685e420a4bd2c6e7fadc41d0a1d0278df5a1a82e306066f"
+    },
+    {
+      "file": "05-zfs-directory-layout.png",
+      "firmware": "UEFI",
+      "capture": "09a-uefi-datasets-choice.png",
+      "sha256": "86e4b0e56abee5f74516c2e3c77e97623e11efafa665da438e8ce82e5cf52ff6"
+    },
+    {
+      "file": "06-zfs-install-review.png",
+      "firmware": "BIOS",
+      "capture": "13-bios-review.png",
+      "sha256": "e64eb60d68257c9c8e869fb9bd1352f5377f405c438bca2c0b6e5528d2fdc05d"
+    },
+    {
+      "file": "07-bios-boot-menu.png",
+      "firmware": "BIOS",
+      "capture": "00-bios-boot.png",
+      "sha256": "0e57f0a45a0ce992d8bf584a68d613aca630719c8b37be6a4b9e6720b7a54b87"
+    },
+    {
+      "file": "08-uefi-boot-menu.png",
+      "firmware": "UEFI",
+      "capture": "00-uefi-boot.png",
+      "sha256": "f4094a73ebbcab4086c058be532b76f939e250bdb94759365cab22fbc17ba2df"
+    },
+    {
+      "file": "09-seven-preparation-tasks.png",
+      "firmware": "BIOS",
+      "capture": "01-bios-seven-preparation-tasks.png",
+      "sha256": "1a755518fceceb3e035ebb2cdbd4d926801396eeaf0ad3e56e220aebdabeae89"
+    },
+    {
+      "file": "10-keyboard-layout.png",
+      "firmware": "UEFI",
+      "capture": "06-uefi-keyboard.png",
+      "sha256": "527a45b20c2ab447f99653c26d8d4231bfd9fd64e78a2c911ab9eeeebc19a1a0"
+    },
+    {
+      "file": "11-keyboard-help.png",
+      "firmware": "BIOS",
+      "capture": "04a-bios-welcome-f1.png",
+      "sha256": "067e9f2504e5a672910e094f3950a55ab9b51c66a85e71efa0a1876ac89851fc"
+    },
+    {
+      "file": "12-release-history.png",
+      "firmware": "BIOS",
+      "capture": "04b-bios-welcome-f3.png",
+      "sha256": "47df5646b038f5af0579466e4a16a436243666f1ad29998cbc354bd797b7204b"
+    },
+    {
+      "file": "13-hostname-default.png",
+      "firmware": "BIOS",
+      "capture": "10-bios-server-default.png",
+      "sha256": "3d85bc33a3f572d91c0c8ab7e6461f5750650445140645630e73895adbfc29e8"
+    },
+    {
+      "file": "14-ssh-access.png",
+      "firmware": "UEFI",
+      "capture": "11-uefi-ssh-access.png",
+      "sha256": "f545d9a56132bfb6270cc084c0cefd7b54a3af8b69b7fcb0c58b21845344a9a6"
+    },
+    {
+      "file": "15-ssh-public-key.png",
+      "firmware": "UEFI",
+      "capture": "11a-uefi-public-key-field.png",
+      "sha256": "cc47bae46472bec1ad3377f365de5e04d96299a1cf51639ea1c96cbc90d0759a"
+    },
+    {
+      "file": "16-password-entry.png",
+      "firmware": "UEFI",
+      "capture": "12-uefi-password.png",
+      "sha256": "3a3996596412147dd6be0ee295e71030332a36c1e37204ddb2ba02fc7805eafd"
+    },
+    {
+      "file": "17-erase-confirmation.png",
+      "firmware": "UEFI",
+      "capture": "14-uefi-erase-gated.png",
+      "sha256": "6e5db0c44e5113a6b250d46fdf1a9d33aa87b5d0bc537fdfe8b5790d6739dddf"
+    },
+    {
+      "file": "18-install-progress.png",
+      "firmware": "BIOS",
+      "capture": "15-bios-progress.png",
+      "sha256": "539b5fa7d740d547e37c1bdff211d3de48282b9e1dd80af0997b695b7d0e5aa0"
+    },
+    {
+      "file": "19-uefi-bootloader-progress.png",
+      "firmware": "UEFI",
+      "capture": "15e-uefi-boot-stage.png",
+      "sha256": "380839de771bc6c3cfa9309950b0c4b2c175f95d18dac40952face5e44c8e2b4"
+    },
+    {
+      "file": "20-bios-install-complete.png",
+      "firmware": "BIOS",
+      "capture": "16-bios-complete.png",
+      "sha256": "66083a5bb11cb7e2fcb1028cc79336462dff4cbebde48098ab1f4669ca6edcab"
+    },
+    {
+      "file": "21-uefi-install-complete.png",
+      "firmware": "UEFI",
+      "capture": "16-uefi-complete.png",
+      "sha256": "5cecf52e71ffb50ada298bb919468d0c4035f8993802b148ef31cd327ffd5f4c"
+    },
+    {
+      "file": "22-installed-grub.png",
+      "firmware": "UEFI",
+      "capture": "17-uefi-installed-grub.png",
+      "sha256": "021e445809cf720cb24afdc585ecfc511b95a8b8ceb41d34ecf9e520be75c149"
+    }
+  ]
+}
